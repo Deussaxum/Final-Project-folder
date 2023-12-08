@@ -6,7 +6,7 @@ import base64
 
 # Set Streamlit theme to a colorful and attractive style
 st.set_page_config(
-    page_title="Career Fit Assessment Tool",
+    page_title="Industry Fit Assessment Tool",
     page_icon="🌟",
     layout="wide",
 )
