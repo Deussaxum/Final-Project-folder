@@ -42,6 +42,7 @@ common_image_url2 = "https://images.unsplash.com/photo-1486406146926-c627a92ad1a
 common_image_url3 = "https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 common_image_url4 = "https://unsplash.com/photos/people-sitting-in-front-of-computer-monitors-dZxQn4VEv2M"
 common_image_url5 = "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+common_image_url6 = "https://images.unsplash.com/photo-1546953304-5d96f43c2e94?q=80&w=3029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 col1, col2 = st.columns(2)
 
 # Box 1
@@ -77,7 +78,7 @@ with col1:
 # Box 6
 with col2:
     st.subheader("Academic 📚")
-    st.image(common_image_url2)
+    st.image(common_image_url6)
     st.write("Working in Academia involves teaching, guiding students through lectures and seminars, and conducts research to contribute to their field of expertise. You often participate in academic service such as serving on committees and reviewing scholarly work.")
 
 
