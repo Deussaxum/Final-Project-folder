@@ -122,16 +122,5 @@ st.write("   ")
 
 col1, col2 = st.columns(2)
 
-button1_clicked = col1.button("CV Generator")
 
-button2_clicked = col2.button("Industry Fit Assessment")
-
-
-if button1_clicked:
-    st.write("Knopf 1 wurde geklickt!")
-
-if button2_clicked:
-    st.write("Knopf 2 wurde geklickt!")
-
-st.sidebar.success("Please select a page Above.")
 
