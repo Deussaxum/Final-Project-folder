@@ -111,11 +111,12 @@ def calculate_big_five_scores(responses):
 def get_responses_from_sliders(sliders):
     return [slider for slider in sliders]
 
-image_header ="https://images.unsplash.com/photo-1539992190939-08f22d7ebaad?q=80&w=2936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+header_image = "https://images.pexels.com/photos/277593/pexels-photo-277593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+
 
 # Main function
 def main():
-    st.image(image_header,
+    st.image(header_image,
              width=1200, use_column_width='true')  # This will display the image as a header
     st.title("Career Fit Assessment Tool\n Assessment of Industry Fit based on Big 5 Personality Traits, Skills, and Work-Life Balance")
 
