@@ -65,23 +65,21 @@ with col1:
 
 # Box 4
 with col2:
-    st.subheader("Start-Up 🚀")
-    st.image(common_image_url7)
-    st.write("In a startup, you typically wear multiple hats, taking on various responsibilities that can range from strategic planning to hands-on execution. Your role may involve setting direction, creating culture, and driving growth, all while adapting to the fast-paced and ever-changing startup environment.")
-
-# Box 5
-with col1:
     st.subheader("IT 💻")
     st.image(common_image_url5)
     st.write("As an IT professional, you manage and store data using computers, software, databases, networks, and servers, and your role may include writing programs, maintaining networks, analyzing systems, and providing technical support.") 
 
-# Box 6
-with col2:
+# Box 5
+with col1:
     st.subheader("Academic 📚")
     st.image(common_image_url6)
     st.write("Working in Academia involves teaching, guiding students through lectures and seminars, and conducts research to contribute to their field of expertise. You often participate in academic service such as serving on committees and reviewing scholarly work.")
 
-
+# Box 6
+with col2:
+    st.subheader("Start-Up 🚀")
+    st.image(common_image_url7)
+    st.write("In a startup, you typically wear multiple hats, taking on various responsibilities that can range from strategic planning to hands-on execution. Your role may involve setting direction, creating culture, and driving growth, all while adapting to the fast-paced and ever-changing startup environment.")
 
 
 
