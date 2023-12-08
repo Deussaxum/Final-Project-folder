@@ -116,8 +116,7 @@ header_image = "https://images.pexels.com/photos/277593/pexels-photo-277593.jpeg
 
 # Main function
 def main():
-    st.image(header_image,
-             width=500, use_column_width='true')  # This will display the image as a header
+    st.image(header_image)
     st.title("Career Fit Assessment Tool\n Assessment of Industry Fit based on Big 5 Personality Traits, Skills, and Work-Life Balance")
 
     # Big Five Personality Questions
