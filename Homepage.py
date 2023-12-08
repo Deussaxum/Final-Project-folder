@@ -36,7 +36,7 @@ st.info("""
     The results are presented in a visually accessible format, utilizing diagrams to illustrate your skills and personality traits. Here you can see some examples for such diagrams: 
 """)
 
-
+col1, col2 = st.columns(2)
 
 # Box 1
 with col1:
@@ -116,7 +116,7 @@ st.write("   ")
 st.write("   ")
 st.write("   ")
 
-col1, col2 = st.columns(2)
+
 
 
 
