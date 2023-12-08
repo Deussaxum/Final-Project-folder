@@ -36,11 +36,7 @@ st.info("""
     The results are presented in a visually accessible format, utilizing diagrams to illustrate your skills and personality traits. Here you can see some examples for such diagrams: 
 """)
 
-local_image_path1 = "/Applications/DustinDia1.png"
-local_image_path2 = "/Applications/DustinDia2.jpg"
-local_image_path3 = "/Applications/DustinDia3.png"
-local_image_path4 = "/Applications/DustinDia4.png"
-col1, col2 = st.columns(2)
+
 
 # Box 1
 with col1:
