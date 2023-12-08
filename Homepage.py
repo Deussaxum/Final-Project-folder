@@ -36,30 +36,6 @@ st.info("""
     The results are presented in a visually accessible format, utilizing diagrams to illustrate your skills and personality traits. Here you can see some examples for such diagrams: 
 """)
 
-col1, col2 = st.columns(2)
-
-# Box 1
-with col1:
-    
-    st.image(local_image_path1)
-  
-
-# Box 2
-with col2:
-   
-    st.image(local_image_path2)
-   
-
-# Box 3
-with col1:
-  
-    st.image(local_image_path3)
-    
-
-# Box 4
-with col2:
-   
-    st.image(local_image_path4)
   
 
 st.subheader("Industry Overview")
