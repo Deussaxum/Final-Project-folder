@@ -38,7 +38,7 @@ st.info("""
 
   
 common_image_url1 = "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-common_image_url2 = "https://media.gq-magazin.de/photos/5f684a5c1744746f33a1c573/1:1/w_1248,h_1248,c_limit/leonardo-dicaprio-el-lobo-de-wall-street.jpg"
+common_image_url2 = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
 col1, col2 = st.columns(2)
 
