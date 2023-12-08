@@ -58,7 +58,8 @@ def plot_radar_chart(categories, scores, title, figure_size=(2, 2), dpi=2000, ti
     img_data.seek(0)
 
     # Display the high-resolution image using st.image
-    st.image(img_data, width=1000)
+    career_fit_picture ="https://images.unsplash.com/photo-1539992190939-08f22d7ebaad?q=80&w=2936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    st.image(career_fit_picture, width=1000)
 
 # Function to create a bar chart with customizable size, resolution, and fontsize
 def plot_bar_chart(labels, values, title, figure_size=(8, 4), dpi=1500, label_fontsize=12, title_fontsize=14):
