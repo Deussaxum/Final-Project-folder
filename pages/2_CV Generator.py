@@ -224,7 +224,7 @@ with tabs[1]:
     st.header("Skills & Interest")
     languages1 = st.text_input("Sprachen", key="unique_key_69")
     computer1 = st.text_input("Computerkenntnisse", key="unique_key_70")
-    interests1 = st.text_input("Interesse   n", key="unique_key_71")
+    interests1 = st.text_input("Interessen", key="unique_key_71")
 
     # Button zum Erstellen des CVs
     if st.button("CV Erstellen", key="unique_key_72"):
@@ -365,7 +365,7 @@ with tabs[2]:
     st.header("Skills & Interest")
     languages1 = st.text_input("Sprachen", key="unique_key_106")
     computer1 = st.text_input("Computerkenntnisse", key="unique_key_107")
-    interests1 = st.text_input("Interesse   n", key="unique_key_108")
+    interests1 = st.text_input("Interessen", key="unique_key_108")
 
     # Button zum Erstellen des CVs
     if st.button("CV Erstellen", key="unique_key_109"):
@@ -506,7 +506,7 @@ with tabs[3]:
     st.header("Skills & Interest")
     languages1 = st.text_input("Sprachen", key="unique_key_145")
     computer1 = st.text_input("Computerkenntnisse", key="unique_key_146")
-    interests1 = st.text_input("Interesse   n", key="unique_key_147")
+    interests1 = st.text_input("Interessen", key="unique_key_147")
 
     # Button zum Erstellen des CVs
     if st.button("CV Erstellen", key="unique_key_148"):
@@ -647,7 +647,7 @@ with tabs[4]:
     st.header("Skills & Interest")
     languages1 = st.text_input("Sprachen", key="unique_key_145!")
     computer1 = st.text_input("Computerkenntnisse", key="unique_key_146!")
-    interests1 = st.text_input("Interesse   n", key="unique_key_147!")
+    interests1 = st.text_input("Interessen", key="unique_key_147!")
 
     # Button zum Erstellen des CVs
     if st.button("CV Erstellen", key="unique_key_148!"):
@@ -788,7 +788,7 @@ with tabs[5]:
     st.header("Skills & Interest")
     languages1 = st.text_input("Sprachen", key="unique_key_145!§")
     computer1 = st.text_input("Computerkenntnisse", key="unique_key_146!§")
-    interests1 = st.text_input("Interesse   n", key="unique_key_147!§")
+    interests1 = st.text_input("Interessen", key="unique_key_147!§")
 
     # Button zum Erstellen des CVs
     if st.button("CV Erstellen", key="unique_key_148!§"):
