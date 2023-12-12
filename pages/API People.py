@@ -1,25 +1,10 @@
 import streamlit as st
 import requests
 
-# Define your API key and headers
-api_key = '_EIqMpWEbOnJLoQvNFz1CQ'  # Be sure to replace with your actual API key
+# Define your API key and headers for LinkedIn API
+api_key = '_EIqMpWEbOnJLoQvNFz1CQ'  # Replace with your actual API key
 headers = {'Authorization': 'Bearer ' + api_key}
 api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
-
-# Streamlit app layout
-st.set_page_config(layout="wide")  # Set the page layout to wide
-
-# Create columns for the header and the LinkedIn logo
-header_col, logo_col = st.columns([0.9, 0.1])
-
-# Use the first column to display the app title
-with header_col:
-    st.title('LinkedIn Profile Filler')
-
-# Use the second column to display the LinkedIn logo
-with logo_col:
-    linkedin_logo_url = 'https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png'
-    st.image(linkedin_logo_url, width=50)
 
 # Function to extract information from API response
 def extract_info(jsondata):
@@ -30,34 +15,58 @@ def extract_info(jsondata):
     }
     return extracted_info
 
-# Function to retrieve information
-def retrieve_info():
+# Function to retrieve information from LinkedIn
+def retrieve_info(linkedin_profile_url):
     params = {'linkedin_profile_url': linkedin_profile_url}
     response = requests.get(api_endpoint, params=params, headers=headers)
     if response.status_code == 200:
         data = response.json()
-        info = extract_info(data)
-        display_info(info)
+        return extract_info(data)
     else:
         st.error(f"Failed to retrieve profile information: HTTP {response.status_code}")
+        return {}
 
-# Function to display profile information
-def display_info(info):
-    st.subheader('Profile Information:')
-    st.write('Full Name:', info['full_name'])
-    st.write('City:', info['city'])
-    
-    st.subheader('Experiences:')
-    for exp in info['experiences']:
-        st.write('Title:', exp.get('title', 'Not available'))
-        st.write('Company:', exp.get('company', 'Not available'))
-        st.write('Description:', exp.get('description', 'Not available'))
-        st.write('---')  # Separator line
+# Streamlit app layout
+st.set_page_config(layout="wide")  # Set the page layout to wide
+st.title("CV Generator 📃")
 
-# Input field for LinkedIn profile URL
-linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL')
+tab_titles = ["Consulting 🧮", "Finance 📈", "Corporate 🏢", "Start-Up 🚀", "IT 🖥️", "Academic 📚"]
+tabs = st.tabs(tab_titles)
 
-# Button to trigger the information retrieval
-if st.button('Retrieve Information'):
-    retrieve_info()
+for tab in tabs:
+    with tab:
+        # LinkedIn Profile URL Input
+        linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key=f"linkedin_url_{tab.title}")
 
+        # Get LinkedIn Data Button
+        if st.button("Get your input via LinkedIn", key=f"linkedin_button_{tab.title}"):
+            if linkedin_profile_url:
+                linkedin_data = retrieve_info(linkedin_profile_url)
+                name = linkedin_data['full_name'] if 'full_name' in linkedin_data else ''
+                city = linkedin_data['city'] if 'city' in linkedin_data else ''
+                # Process other data as needed
+
+        # Input fields for personal information
+        name = st.text_input("Name", value=name, key=f"name_{tab.title}")
+        email = st.text_input("E-Mail", key=f"email_{tab.title}")
+        phone = st.text_input("Telefonnummer", key=f"phone_{tab.title}")
+        address = st.text_input("Adresse", key=f"address_{tab.title}")
+
+        # Education Section
+        st.header("Education")
+        # [Add education input fields here]
+
+        # Professional Experience Section
+        st.header("Professional Experience")
+        # [Add professional experience input fields here]
+
+        # Skills & Interest
+        st.header("Skills & Interest")
+        # [Add skills & interest input fields here]
+
+        # Button to Create CV
+        if st.button("Create CV", key=f"cv_button_{tab.title}"):
+            # [Add functionality to create and download CV]
+            st.success("CV Created Successfully!")
+
+# Note: Expand each section with specific input fields and functionalities as needed.
