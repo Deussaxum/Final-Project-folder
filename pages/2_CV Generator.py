@@ -20,6 +20,60 @@ with tabs[0]:
     st.title("Consulting 🧮")
 
     # API Anbindung
+
+import requests
+
+# Function to extract information from API response
+def extract_info(jsondata):
+    extracted_info = {
+        'full_name': jsondata.get('full_name', ''),
+        'city': jsondata.get('city', ''),
+        'experiences': jsondata.get('experiences', [])
+    }
+    return extracted_info
+
+# Function to retrieve information
+def retrieve_info(linkedin_profile_url):
+    # Define your API key and headers
+    api_key = '_EIqMpWEbOnJLoQvNFz1CQ'  # Be sure to replace with your actual API key
+    headers = {'Authorization': 'Bearer ' + api_key}
+    api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
+    params = {'linkedin_profile_url': linkedin_profile_url}
+    response = requests.get(api_endpoint, params=params, headers=headers)
+    if response.status_code == 200:
+        data = response.json()
+        info = extract_info(data)
+        return info
+    else:
+        st.error(f"Failed to retrieve profile information: HTTP {response.status_code}")
+        return {}
+
+# Streamlit-Benutzeroberfläche
+st.title("CV Generator 📃")
+
+# LinkedIn profile URL input
+linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='linkedin_url')
+linkedin_data = {}
+if st.button('Get your input via LinkedIn', key='linkedin_button'):
+    linkedin_data = retrieve_info(linkedin_profile_url)
+
+# The rest of your CV code goes here, use linkedin_data to pre-fill the fields.
+# For example, if linkedin_data has a full name, pre-fill the name field:
+name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key="unique_key_1")
+
+# You would do similar for the experiences, checking how many there are and filling them out accordingly:
+if linkedin_data:  # If linkedin_data is not empty
+    experiences = linkedin_data.get('experiences', [])
+    if len(experiences) > 0:
+        experience1 = experiences[0].get('company', '')
+        position1 = experiences[0].get('title', '')
+        # Add text inputs for the first experience
+        st.text_input("Erfahrung 1", value=experience1, key="unique_key_19")
+        st.text_input("Position 1", value=position1, key="unique_key_21")
+        # Repeat for other experiences
+
+# Continue with the rest of your CV generator code...
+
     st.button("Get your input via LinkedIn", key="unique_key_0")
 
     # Persönliche Informationen
