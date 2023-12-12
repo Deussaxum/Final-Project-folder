@@ -27,7 +27,7 @@ if 'jobs' not in st.session_state:
     st.session_state['search_initiated'] = False
 
 # Title and logo layout
-header_col, logo_col = st.columns([0.85, 0.15])
+header_col, logo_col = st.columns([0.85, 0.1])
 with header_col:
     st.header("Job Search")
 with logo_col:
