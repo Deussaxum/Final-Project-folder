@@ -147,7 +147,7 @@ starts_at3 = format_date(experience_entries[2].get('starts_at')) if len(experien
 ends_at3 = format_date(experience_entries[2].get('ends_at')) if len(experience_entries) > 2 else ''
 timee3 = f"{starts_at3} - {ends_at3}" if ends_at3 else starts_at3
 
-with st.expander("Professional Experience", expanded=True):  # 'expanded=True' means the section will be expanded by default
+with st.expander("Professional Experience", expanded=False):  # 'expanded=True' means the section will be expanded by default
     experience1 = st.text_input("Erfahrung 1", value=experience1, key="unique_key_131")
     locatione1 = st.text_input("Standort Erfahrung 1", value=locatione1, key="unique_key_132")
     position1 = st.text_input("Position 1", value=position1, key="unique_key_133")
@@ -175,7 +175,7 @@ with st.expander("Professional Experience", expanded=True):  # 'expanded=True' m
 # Extracurricular Activities / Engagement Section
 st.header("Extracurricular Activities / Engagement")
 
-with st.expander("Extracurricular Activities / Engagement", expanded=True):  # 'expanded=True' means the section will be expanded by default
+with st.expander("Extracurricular Activities / Engagement", expanded=False):  # 'expanded=True' means the section will be expanded by default
     # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
     volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
     certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
@@ -198,7 +198,7 @@ with st.expander("Extracurricular Activities / Engagement", expanded=True):  # '
 st.header("Skills & Interest")
 
 # Wrap the Skills & Interest section in an expander
-with st.expander("Skills & Interest", expanded=True):  # 'expanded=True' means the section will be expanded by default
+with st.expander("Skills & Interest", expanded=False):  # 'expanded=True' means the section will be expanded by default
     # Retrieve the computer skills entries from LinkedIn data if they exist
     computer_skills_entries = linkedin_data.get('computer_skills', [''])  # Assuming it's a list of titles
 
