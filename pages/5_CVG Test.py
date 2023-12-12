@@ -13,7 +13,7 @@ def extract_info(jsondata):
 # Function to retrieve information
 def retrieve_info(linkedin_profile_url):
     # Define your API key and headers
-    api_key = 'YOUR_API_KEY'  # Be sure to replace with your actual API key
+    api_key = '_EIqMpWEbOnJLoQvNFz1CQ'  # Be sure to replace with your actual API key
     headers = {'Authorization': 'Bearer ' + api_key}
     api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
     params = {'linkedin_profile_url': linkedin_profile_url}
