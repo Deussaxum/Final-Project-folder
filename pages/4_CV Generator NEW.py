@@ -188,9 +188,9 @@ with tabs[0]:
         task33 = st.text_area("Aufgaben 3", key='task33_27', height=100)
 
     # Extracurricular Activities / Engagement Section
-    st.header("Extracurricular Activities / Engagement")
+    st.header("Extracurricular Activities")
 
-    with st.expander("Extracurricular Activities / Engagement", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
         volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
         certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
@@ -469,9 +469,9 @@ with tabs[1]:
         task33 = st.text_area("Aufgaben 3", key='task33_36', height=100)
 
     # Extracurricular Activities / Engagement Section
-    st.header("Extracurricular Activities / Engagement")
+    st.header("Extracurricular Activities")
 
-    with st.expander("Extracurricular Activities / Engagement", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
         volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
         certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
@@ -750,9 +750,9 @@ with tabs[2]:
         task33 = st.text_area("Aufgaben 3", key='task33_45', height=100)
 
     # Extracurricular Activities / Engagement Section
-    st.header("Extracurricular Activities / Engagement")
+    st.header("Extracurricular Activities")
 
-    with st.expander("Extracurricular Activities / Engagement", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
         volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
         certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
@@ -1030,9 +1030,9 @@ with tabs[3]:
         task33 = st.text_area("Aufgaben 3", key='task33_54', height=100)
 
     # Extracurricular Activities / Engagement Section
-    st.header("Extracurricular Activities / Engagement")
+    st.header("Extracurricular Activities")
 
-    with st.expander("Extracurricular Activities / Engagement", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
         volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
         certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
@@ -1310,9 +1310,9 @@ with tabs[4]:
         task33 = st.text_area("Aufgaben 3", key='task33_63', height=100)
 
     # Extracurricular Activities / Engagement Section
-    st.header("Extracurricular Activities / Engagement")
+    st.header("Extracurricular Activities")
 
-    with st.expander("Extracurricular Activities / Engagement", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
         volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
         certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
@@ -1591,9 +1591,9 @@ with tabs[5]:
         task33 = st.text_area("Aufgaben 3", key='task33_97', height=100)
 
     # Extracurricular Activities / Engagement Section
-    st.header("Extracurricular Activities / Engagement")
+    st.header("Extracurricular Activities")
 
-    with st.expander("Extracurricular Activities / Engagement", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
         volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
         certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
