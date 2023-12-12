@@ -1,7 +1,39 @@
 import streamlit as st
 import requests
 
-# Define all functions and initial linkedin_data dictionary as before...
+# Function to extract information from API response
+def extract_info(jsondata):
+    # Initialize default values for all fields
+    extracted_info = {
+        'full_name': jsondata.get('full_name', ''),
+        'city': jsondata.get('city', ''),
+        'state': jsondata.get('state', ''),
+        'country': jsondata.get('country', ''),
+        'education': jsondata.get('education', []),
+        'experiences': jsondata.get('experiences', []),
+        'volunteer_work': jsondata.get('volunteer_work', []),
+        'certifications': jsondata.get('certifications', []),
+        'languages': jsondata.get('languages', []),
+        'interests': jsondata.get('interests', [])
+    }
+    return extracted_info
+
+# Function to retrieve information
+def retrieve_info(linkedin_profile_url):
+    api_key = '_EIqMpWEbOnJLoQvNFz1CQ'
+    headers = {'Authorization': 'Bearer ' + api_key}
+    api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
+    params = {'linkedin_profile_url': linkedin_profile_url}
+    response = requests.get(api_endpoint, params=params, headers=headers)
+    if response.status_code == 200:
+        data = response.json()
+        return extract_info(data)
+    else:
+        st.error(f"Failed to retrieve profile information: HTTP {response.status_code}")
+        return {}
+
+# Initialize linkedin_data as an empty dictionary to avoid NameError
+linkedin_data = {}
 
 # Streamlit app layout
 st.title("CV Generator 📃")
@@ -14,8 +46,8 @@ if st.button('Retrieve LinkedIn Data'):
 st.header("Persönliche Informationen")
 name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='unique_key_1')
 address = st.text_input("Adresse", value=f"{linkedin_data.get('city', '')}, {linkedin_data.get('state', '')}, {linkedin_data.get('country', '')}", key='unique_key_2')
-phone = st.text_input("Telefonnummer", key='unique_key_3')  # No LinkedIn data for phone
-email = st.text_input("E-Mail", key='unique_key_4')  # No LinkedIn data for email
+phone = st.text_input("Telefonnummer", key='unique_key_3')
+email = st.text_input("E-Mail", key='unique_key_4')
 
 # Education Section
 st.header("Education")
