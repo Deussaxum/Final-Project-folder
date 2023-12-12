@@ -197,19 +197,19 @@ with st.expander("Extracurricular Activities / Engagement", expanded=True):  # '
 # Skills & Interest Section
 st.header("Skills & Interest")
 
-# Retrieve the computer skills entries from LinkedIn data if they exist
-computer_skills_entries = linkedin_data.get('computer_skills', [''])  # Assuming it's a list of titles
+# Wrap the Skills & Interest section in an expander
+with st.expander("Skills & Interest", expanded=True):  # 'expanded=True' means the section will be expanded by default
+    # Retrieve the computer skills entries from LinkedIn data if they exist
+    computer_skills_entries = linkedin_data.get('computer_skills', [''])  # Assuming it's a list of titles
 
-# Join the first three entries for languages, interests, and computer skills with a comma
-languages_combined = ', '.join(languages_entries[0:3])
-interests_combined = ', '.join(interests_entries[0:3])
-computer_skills_combined = ', '.join(computer_skills_entries[0:3])
+    # Join the first three entries for languages, interests, and computer skills with a comma
+    languages_combined = ', '.join(languages_entries[0:3])
+    interests_combined = ', '.join(interests_entries[0:3])
+    computer_skills_combined = ', '.join(computer_skills_entries[0:3])
 
-# Text inputs for skills and interests details with pre-populated or empty values
-languages1 = st.text_input("Sprachen", value=languages_combined, key="languages_1_key")
-computer1 = st.text_input("Computerkenntnisse", value=computer_skills_combined, key="computer_skills_key")
-interests1 = st.text_input("Interessen", value=interests_combined, key="interests_1_key")
-
+    languages1 = st.text_input("Sprachen", value=languages_combined, key="languages_1_key")
+    computer1 = st.text_input("Computerkenntnisse", value=computer_skills_combined, key="computer_skills_key")
+    interests1 = st.text_input("Interessen", value=interests_combined, key="interests_1_key")
 
 # Button to create the CV
 if st.button("Create CV", key='create_cv_button'):
