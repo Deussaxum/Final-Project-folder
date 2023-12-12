@@ -57,9 +57,9 @@ with tabs[0]:
         linkedin_data = retrieve_info(linkedin_profile_url) or {}
 
     # Personal Information Section
-    st.header("Persönliche Informationen")
+    st.header("Personal Informationen")
 
-    with st.expander("Persönliche Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Personal Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve individual address components, defaulting to an empty string if not found
         city = linkedin_data.get('city', '')
         state = linkedin_data.get('state', '')
