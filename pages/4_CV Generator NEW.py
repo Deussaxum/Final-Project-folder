@@ -338,10 +338,10 @@ with tabs[1]:
         linkedin_data = retrieve_info(linkedin_profile_url) or {}
 
     # Personal Information Section
-    st.header("Persönliche Informationen")
+    st.header("Personal Informationen")
 
     # Retrieve individual address components, defaulting to an empty string if not found
-    with st.expander("Persönliche Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Personal Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
         city = linkedin_data.get('city', '')
         state = linkedin_data.get('state', '')
         country = linkedin_data.get('country', '')
@@ -352,8 +352,8 @@ with tabs[1]:
 
         # Streamlit text input fields
         name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='name_key_2')
-        address = st.text_input("Adresse", value=formatted_address, key='address_key_2')
-        phone = st.text_input("Telefonnummer", key='phone_key_2')
+        address = st.text_input("Address", value=formatted_address, key='address_key_2')
+        phone = st.text_input("Phone Number", key='phone_key_2')
         email = st.text_input("E-Mail", key='email_key_2')
 
 
@@ -390,21 +390,21 @@ with tabs[1]:
     timeus2 = f"{starts_at2} - {ends_at2}" if ends_at2 else starts_at2
 
     with st.expander("Education", expanded=False):  # 'expanded=True' means the section will be expanded by default
-        university1 = st.text_input("Universität/Schule 1", value=university1, key="unique_key_144")
-        locationus1 = st.text_input("Standort 1", value=locationus1, key="unique_key_145")
-        majorus1 = st.text_input("Studiengang 1", value=majorus1, key="unique_key_146")
-        timeus1 = st.text_input("Zeitraum 1", value=timeus1, key="unique_key_147")
-        courses1 = st.text_input("Kurse 1", key="unique_key_148")
+        university1 = st.text_input("University/School 1", value=university1, key="unique_key_144")
+        locationus1 = st.text_input("Location 1", value=locationus1, key="unique_key_145")
+        majorus1 = st.text_input("Study Programm 1", value=majorus1, key="unique_key_146")
+        timeus1 = st.text_input("Time Frame 1", value=timeus1, key="unique_key_147")
+        courses1 = st.text_input("Courses 1", key="unique_key_148")
         gpa1 = st.text_input("GPA 1", value=gpa1, key="unique_key_149")
-        clubs1 = st.text_input("Clubs/Aktivitäten 1", key="unique_key_150")
+        clubs1 = st.text_input("Clubs/Activities 1", key="unique_key_150")
 
-        university2 = st.text_input("Universität/Schule 2", value=university2, key="unique_key_151")
-        locationus2 = st.text_input("Standort 2", value=locationus2, key="unique_key_152")
-        majorus2 = st.text_input("Studiengang 2", value=majorus2, key="unique_key_153")
-        timeus2 = st.text_input("Zeitraum 2", value=timeus2, key="unique_key_154")
-        courses2 = st.text_input("Kurse 2", key="unique_key_155")
+        university2 = st.text_input("University/School 2", value=university2, key="unique_key_151")
+        locationus2 = st.text_input("Location 2", value=locationus2, key="unique_key_152")
+        majorus2 = st.text_input("Study Programm 2", value=majorus2, key="unique_key_153")
+        timeus2 = st.text_input("Time Frame 2", value=timeus2, key="unique_key_154")
+        courses2 = st.text_input("Courses 2", key="unique_key_155")
         gpa2 = st.text_input("GPA 2", value=gpa2, key="unique_key_156")
-        clubs2 = st.text_input("Clubs/Aktivitäten 2", key="unique_key_157")
+        clubs2 = st.text_input("Clubs/Activities 2", key="unique_key_157")
 
     # Professional Experience Section
     st.header("Professional Experience")
@@ -444,29 +444,29 @@ with tabs[1]:
     timee3 = f"{starts_at3} - {ends_at3}" if ends_at3 else starts_at3
 
     with st.expander("Professional Experience", expanded=False):  # 'expanded=True' means the section will be expanded by default
-        experience1 = st.text_input("Erfahrung 1", value=experience1, key="unique_key_158")
-        locatione1 = st.text_input("Standort Erfahrung 1", value=locatione1, key="unique_key_159")
+        experience1 = st.text_input("Company 1", value=experience1, key="unique_key_158")
+        locatione1 = st.text_input("Location 1", value=locatione1, key="unique_key_159")
         position1 = st.text_input("Position 1", value=position1, key="unique_key_160")
-        timee1 = st.text_input("Zeitraum Erfahrung 1", value=timee1, key="unique_key_161")
-        task11 = st.text_area("Aufgaben 1", key='task11_28', height=100)
-        task12 = st.text_area("Aufgaben 2", key='task12_29', height=100)
-        task13 = st.text_area("Aufgaben 3", key='task13_30', height=100)
+        timee1 = st.text_input("Time Frame 1", value=timee1, key="unique_key_161")
+        task11 = st.text_area("Tasks 1", key='task11_28', height=100)
+        task12 = st.text_area("Tasks 2", key='task12_29', height=100)
+        task13 = st.text_area("Tasks 3", key='task13_30', height=100)
 
-        experience2 = st.text_input("Erfahrung 2", value=experience2, key="unique_key_162")
-        locatione2 = st.text_input("Standort Erfahrung 2", value=locatione2, key="unique_key_163")
+        experience2 = st.text_input("Company 2", value=experience2, key="unique_key_162")
+        locatione2 = st.text_input("Location 2", value=locatione2, key="unique_key_163")
         position2 = st.text_input("Position 2", value=position2, key="unique_key_164")
-        timee2 = st.text_input("Zeitraum Erfahrung 2", value=timee2, key="unique_key_165")
-        task21 = st.text_area("Aufgaben 1", key='task21_31', height=100)
-        task22 = st.text_area("Aufgaben 2", key='task22_32', height=100)
-        task23 = st.text_area("Aufgaben 3", key='task23_33', height=100)
+        timee2 = st.text_input("Time Frame 2", value=timee2, key="unique_key_165")
+        task21 = st.text_area("Tasks 1", key='task21_31', height=100)
+        task22 = st.text_area("Tasks 2", key='task22_32', height=100)
+        task23 = st.text_area("Tasks 3", key='task23_33', height=100)
 
-        experience3 = st.text_input("Erfahrung 3", value=experience3, key="unique_key_166")
-        locatione3 = st.text_input("Standort Erfahrung 3", value=locatione3, key="unique_key_167")
+        experience3 = st.text_input("Company 3", value=experience3, key="unique_key_166")
+        locatione3 = st.text_input("Location 3", value=locatione3, key="unique_key_167")
         position3 = st.text_input("Position 3", value=position3, key="unique_key_168")
-        timee3 = st.text_input("Zeitraum Erfahrung 3", value=timee3, key="unique_key_169")
-        task31 = st.text_area("Aufgaben 1", key='task31_34', height=100)
-        task32 = st.text_area("Aufgaben 2", key='task32_35', height=100)
-        task33 = st.text_area("Aufgaben 3", key='task33_36', height=100)
+        timee3 = st.text_input("Time Frame 3", value=timee3, key="unique_key_169")
+        task31 = st.text_area("Tasks 1", key='task31_34', height=100)
+        task32 = st.text_area("Tasks 2", key='task32_35', height=100)
+        task33 = st.text_area("Tasks 3", key='task33_36', height=100)
 
     # Extracurricular Activities / Engagement Section
     st.header("Extracurricular Activities")
@@ -486,9 +486,9 @@ with tabs[1]:
         volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
         certifications_combined = ', '.join(certifications_titles[0:3])
 
-        extracurricular1 = st.text_input("Extrakurrikulare Aktivitäten", value=volunteer_work_combined, key="extracurricular_2_key")
-        additionaleducation1 = st.text_input("Zusätzliche Bildung", key="additional_education_2_key")  # No specific API data, so left for manual input
-        certificates1 = st.text_input("Zertifikate und Errungenschaften", value=certifications_combined, key="certificates_2_key")
+        extracurricular1 = st.text_input("Extracurricular Activities", value=volunteer_work_combined, key="extracurricular_2_key")
+        additionaleducation1 = st.text_input("Additional Education", key="additional_education_2_key")  # No specific API data, so left for manual input
+        certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_2_key")
 
     # Skills & Interest Section
     st.header("Skills & Interest")
@@ -503,12 +503,12 @@ with tabs[1]:
         interests_combined = ', '.join(interests_entries[0:3])
         computer_skills_combined = ', '.join(computer_skills_entries[0:3])
 
-        languages1 = st.text_input("Sprachen", value=languages_combined, key="languages_2_key")
-        computer1 = st.text_input("Computerkenntnisse", value=computer_skills_combined, key="computer_skills_key_2")
-        interests1 = st.text_input("Interessen", value=interests_combined, key="interests_2_key")
+        languages1 = st.text_input("Languages", value=languages_combined, key="languages_2_key")
+        computer1 = st.text_input("Computer Skills", value=computer_skills_combined, key="computer_skills_key_2")
+        interests1 = st.text_input("Interests", value=interests_combined, key="interests_2_key")
 
     # Button zum Erstellen des CVs
-    if st.button("CV Erstellen", key="unique_key_170"):
+    if st.button("Generate CV", key="unique_key_170"):
         try:
             with open('template_finance.tex', 'r', encoding='utf-8') as file:
                 latex_template = file.read()
