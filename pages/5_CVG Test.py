@@ -50,7 +50,6 @@ with tabs[0]:
     linkedin_data = {}
 
     # Streamlit app layout
-    st.title("CV Generator 📃")
     linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='linkedin_url_key')
 
     if st.button('Retrieve LinkedIn Data', key='retrieve_data_button'):
