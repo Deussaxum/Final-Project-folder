@@ -172,27 +172,24 @@ with st.expander("Professional Experience", expanded=True):  # 'expanded=True' m
     task32 = st.text_area("Aufgaben 2", key='task32_26', height=100)
     task33 = st.text_area("Aufgaben 3", key='task33_27', height=100)
 
-# Extracurricular Activities / Engagement Section
-st.header("Extracurricular Activities / Engagement")
+with st.expander("Extracurricular Activities / Engagement", expanded=True):  # 'expanded=True' means the section will be expanded by default
+    # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
+    volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
+    certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
+    languages_entries = linkedin_data.get('languages', [''])  # Assuming it's a list of titles
+    interests_entries = linkedin_data.get('interests', [''])  # Assuming it's a list of titles
 
-# Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
-volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
-certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
-languages_entries = linkedin_data.get('languages', [''])  # Assuming it's a list of titles
-interests_entries = linkedin_data.get('interests', [''])  # Assuming it's a list of titles
+    # Extract titles from volunteer work and certifications
+    volunteer_work_titles = [entry.get('title', '') for entry in volunteer_work_entries]
+    certifications_titles = [entry.get('name', '') for entry in certifications_entries]
 
-# Extract titles from volunteer work and certifications
-volunteer_work_titles = [entry.get('title', '') for entry in volunteer_work_entries]
-certifications_titles = [entry.get('name', '') for entry in certifications_entries]
+    # Combine the first three titles with a comma
+    volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
+    certifications_combined = ', '.join(certifications_titles[0:3])
 
-# Combine the first three titles with a comma
-volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
-certifications_combined = ', '.join(certifications_titles[0:3])
-
-# Text inputs for extracurricular activities details with pre-populated or empty values
-extracurricular1 = st.text_input("Extrakurrikulare Aktivitäten", value=volunteer_work_combined, key="extracurricular_1_key")
-additionaleducation1 = st.text_input("Zusätzliche Bildung", key="additional_education_1_key")  # No specific API data, so left for manual input
-certificates1 = st.text_input("Zertifikate und Errungenschaften", value=certifications_combined, key="certificates_1_key")
+    extracurricular1 = st.text_input("Extrakurrikulare Aktivitäten", value=volunteer_work_combined, key="extracurricular_1_key")
+    additionaleducation1 = st.text_input("Zusätzliche Bildung", key="additional_education_1_key")  # No specific API data, so left for manual input
+    certificates1 = st.text_input("Zertifikate und Errungenschaften", value=certifications_combined, key="certificates_1_key")
 
 # Skills & Interest Section
 st.header("Skills & Interest")
