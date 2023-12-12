@@ -16,8 +16,6 @@ tabs=st.tabs(tab_titles)
 
 with tabs[0]:
 
-    st.title("Consulting 🧮")
-    
     # Function to extract information from API response
     def extract_info(jsondata):
         # Initialize default values for all fields
