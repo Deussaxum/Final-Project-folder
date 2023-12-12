@@ -671,7 +671,7 @@ with tabs[2]:
         university1 = st.text_input("Universität/Schule 1", value=university1, key="unique_key_171")
         locationus1 = st.text_input("Standort 1", value=locationus1, key="unique_key_172")
         majorus1 = st.text_input("Studiengang 1", value=majorus1, key="unique_key_173")
-        timeus1 = st.text_input("Zeitraum 1", value=timeus1, key="unique_key_173")
+        timeus1 = st.text_input("Zeitraum 1", value=timeus1, key="unique_key_224")
         courses1 = st.text_input("Kurse 1", key="unique_key_174")
         gpa1 = st.text_input("GPA 1", value=gpa1, key="unique_key_175")
         clubs1 = st.text_input("Clubs/Aktivitäten 1", key="unique_key_176")
