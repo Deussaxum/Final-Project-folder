@@ -57,9 +57,9 @@ with tabs[0]:
         linkedin_data = retrieve_info(linkedin_profile_url) or {}
 
     # Personal Information Section
-    st.header("Personal Informationen")
+    st.header("Personal Information")
 
-    with st.expander("Personal Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Personal Information", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve individual address components, defaulting to an empty string if not found
         city = linkedin_data.get('city', '')
         state = linkedin_data.get('state', '')
@@ -338,10 +338,10 @@ with tabs[1]:
         linkedin_data = retrieve_info(linkedin_profile_url) or {}
 
     # Personal Information Section
-    st.header("Personal Informationen")
+    st.header("Personal Information")
 
     # Retrieve individual address components, defaulting to an empty string if not found
-    with st.expander("Personal Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Personal Information", expanded=False):  # 'expanded=True' means the section will be expanded by default
         city = linkedin_data.get('city', '')
         state = linkedin_data.get('state', '')
         country = linkedin_data.get('country', '')
@@ -392,7 +392,7 @@ with tabs[1]:
     with st.expander("Education", expanded=False):  # 'expanded=True' means the section will be expanded by default
         university1 = st.text_input("University/School 1", value=university1, key="unique_key_144")
         locationus1 = st.text_input("Location 1", value=locationus1, key="unique_key_145")
-        majorus1 = st.text_input("Study Programm 1", value=majorus1, key="unique_key_146")
+        majorus1 = st.text_input("Study Program 1", value=majorus1, key="unique_key_146")
         timeus1 = st.text_input("Time Frame 1", value=timeus1, key="unique_key_147")
         courses1 = st.text_input("Courses 1", key="unique_key_148")
         gpa1 = st.text_input("GPA 1", value=gpa1, key="unique_key_149")
@@ -400,7 +400,7 @@ with tabs[1]:
 
         university2 = st.text_input("University/School 2", value=university2, key="unique_key_151")
         locationus2 = st.text_input("Location 2", value=locationus2, key="unique_key_152")
-        majorus2 = st.text_input("Study Programm 2", value=majorus2, key="unique_key_153")
+        majorus2 = st.text_input("Study Program 2", value=majorus2, key="unique_key_153")
         timeus2 = st.text_input("Time Frame 2", value=timeus2, key="unique_key_154")
         courses2 = st.text_input("Courses 2", key="unique_key_155")
         gpa2 = st.text_input("GPA 2", value=gpa2, key="unique_key_156")
@@ -619,10 +619,10 @@ with tabs[2]:
         linkedin_data = retrieve_info(linkedin_profile_url) or {}
 
     # Personal Information Section
-    st.header("Personal Informationen")
+    st.header("Personal Information")
 
     # Retrieve individual address components, defaulting to an empty string if not found
-    with st.expander("Personal Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Personal Information", expanded=False):  # 'expanded=True' means the section will be expanded by default
         city = linkedin_data.get('city', '')
         state = linkedin_data.get('state', '')
         country = linkedin_data.get('country', '')
@@ -673,7 +673,7 @@ with tabs[2]:
     with st.expander("Education", expanded=False):  # 'expanded=True' means the section will be expanded by default
         university1 = st.text_input("University/School 1", value=university1, key="unique_key_171")
         locationus1 = st.text_input("Location 1", value=locationus1, key="unique_key_172")
-        majorus1 = st.text_input("Study Programm 1", value=majorus1, key="unique_key_173")
+        majorus1 = st.text_input("Study Program 1", value=majorus1, key="unique_key_173")
         timeus1 = st.text_input("Time Frame 1", value=timeus1, key="unique_key_224")
         courses1 = st.text_input("Courses 1", key="unique_key_174")
         gpa1 = st.text_input("GPA 1", value=gpa1, key="unique_key_175")
@@ -681,7 +681,7 @@ with tabs[2]:
 
         university2 = st.text_input("University/School 2", value=university2, key="unique_key_177")
         locationus2 = st.text_input("Location 2", value=locationus2, key="unique_key_178")
-        majorus2 = st.text_input("Study Programm 2", value=majorus2, key="unique_key_179")
+        majorus2 = st.text_input("Study Program 2", value=majorus2, key="unique_key_179")
         timeus2 = st.text_input("Time Frame 2", value=timeus2, key="unique_key_180")
         courses2 = st.text_input("Courses 2", key="unique_key_181")
         gpa2 = st.text_input("GPA 2", value=gpa2, key="unique_key_182")
@@ -900,10 +900,10 @@ with tabs[3]:
         linkedin_data = retrieve_info(linkedin_profile_url) or {}
 
     # Personal Information Section
-    st.header("Personal Informationen")
+    st.header("Personal Information")
 
     # Retrieve individual address components, defaulting to an empty string if not found
-    with st.expander("Personal Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Personal Information", expanded=False):  # 'expanded=True' means the section will be expanded by default
         city = linkedin_data.get('city', '')
         state = linkedin_data.get('state', '')
         country = linkedin_data.get('country', '')
