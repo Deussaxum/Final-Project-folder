@@ -52,9 +52,10 @@ email = st.text_input("Email", key='email')
 
 # Education Section
 st.header("Education")
+education_list = linkedin_data.get('education', [])
 for i in range(2):  # Assuming up to 2 education entries
     with st.expander(f"Education {i+1}"):
-        education = linkedin_data.get('education', [{}])[i] if i < len(linkin_data.get('education', [])) else {}
+        education = education_list[i] if i < len(education_list) else {}
         university = st.text_input(f"University/School {i+1}", value=education.get('school', ''), key=f'university_{i}')
         degree = st.text_input(f"Degree {i+1}", value=education.get('degree_name', ''), key=f'degree_{i}')
         field_of_study = st.text_input(f"Field of Study {i+1}", value=education.get('field_of_study', ''), key=f'field_of_study_{i}')
