@@ -44,10 +44,22 @@ if st.button('Retrieve LinkedIn Data', key='retrieve_data_button'):
 
 # Personal Information Section
 st.header("Persönliche Informationen")
+
+# Retrieve individual address components, defaulting to an empty string if not found
+city = linkedin_data.get('city', '')
+state = linkedin_data.get('state', '')
+country = linkedin_data.get('country', '')
+
+# Construct the address string, only including components that are present
+address_components = [comp for comp in [city, state, country] if comp]  # List comprehension to filter out empty components
+formatted_address = ', '.join(address_components)  # Join the components with a comma only if they are present
+
+# Streamlit text input fields
 name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='name_key')
-address = st.text_input("Adresse", value=f"{linkedin_data.get('city', '')}, {linkedin_data.get('state', '')}, {linkedin_data.get('country', '')}", key='address_key')
+address = st.text_input("Adresse", value=formatted_address, key='address_key')
 phone = st.text_input("Telefonnummer", key='phone_key')
 email = st.text_input("E-Mail", key='email_key')
+
 
 # Education Section
 st.header("Education")
