@@ -27,7 +27,7 @@ if 'jobs' not in st.session_state:
     st.session_state['search_initiated'] = False
 
 # Title and logo layout
-header_col, logo_col = st.columns([0.85, 0.05])
+header_col, logo_col = st.columns([0.85, 0.1])
 with header_col:
     st.markdown("# **Job Search**")  # Markdown for bold header
 with logo_col:
