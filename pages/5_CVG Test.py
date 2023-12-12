@@ -142,20 +142,19 @@ task33 = st.text_area("Aufgaben 3", key='task33_27', height=100)
 # Extracurricular Activities / Engagement Section
 st.header("Extracurricular Activities / Engagement")
 
-# Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
-volunteer_work_entries = linkedin_data.get('volunteer_work', [''])  # Assuming it's a list of entries
-certifications_entries = linkedin_data.get('certifications', [''])  # Assuming it's a list of entries
-languages_entries = linkedin_data.get('languages', [''])  # Assuming it's a list of entries
-interests_entries = linkedin_data.get('interests', [''])  # Assuming it's a list of entries
+# Retrieve the titles from volunteer work and certifications if they exist
+# Assuming each entry is a dictionary with a 'title' key
+volunteer_work_titles = [entry.get('title', '') for entry in linkedin_data.get('volunteer_work', [])]
+certifications_titles = [entry.get('title', '') for entry in linkedin_data.get('certifications', [])]
 
-# If there are entries from LinkedIn, use them as default values, otherwise use empty strings
-volunteer_work1 = volunteer_work_entries[0] if volunteer_work_entries else ''
-certifications1 = certifications_entries[0] if certifications_entries else ''
+# Join the first three titles for each with a comma
+volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
+certifications_combined = ', '.join(certifications_titles[0:3])
 
 # Text inputs for extracurricular activities details with pre-populated or empty values
-extracurricular1 = st.text_input("Extrakurrikulare Aktivitäten", value=volunteer_work1, key="extracurricular_1_key")
-additionaleducation1 = st.text_input("Zusätzliche Bildung", key="additional_education_1_key")
-certificates1 = st.text_input("Zertifikate und Errungenschaften", value=certifications1, key="certificates_1_key")
+extracurricular1 = st.text_input("Extrakurrikulare Aktivitäten", value=volunteer_work_combined, key="extracurricular_1_key")
+additionaleducation1 = st.text_input("Zusätzliche Bildung", key="additional_education_1_key")  # Assuming manual input as no API data
+certificates1 = st.text_input("Zertifikate und Errungenschaften", value=certifications_combined, key="certificates_1_key")
 
 # Skills & Interest Section
 st.header("Skills & Interest")
