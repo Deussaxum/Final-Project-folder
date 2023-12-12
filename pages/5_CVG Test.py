@@ -83,22 +83,49 @@ courses2 = st.text_input("Kurse 2", key="unique_key_16")  # No LinkedIn data for
 gpa2 = st.text_input("GPA 2", value=gpa2, key="unique_key_17")
 clubs2 = st.text_input("Clubs/Aktivitäten 2", key="unique_key_18")  # No LinkedIn data for clubs/activities
 
-
 # Professional Experience Section
 st.header("Professional Experience")
-# Assuming the first three experience entries in LinkedIn data (if they exist) are to be used
+
+# Retrieve up to three experience entries from LinkedIn data if they exist
 experience_entries = linkedin_data.get('experiences', [{} for _ in range(3)])
-for j in range(3):
-    with st.expander(f"Experience {j+1}"):
-        experience = experience_entries[j]
-        company = st.text_input(f"Erfahrung {j+1}", value=experience.get('company', ''), key=f'company_{j+1}_key')
-        locatione = st.text_input(f"Standort Erfahrung {j+1}", value=experience.get('location', ''), key=f'experience_location_{j+1}_key')
-        position = st.text_input(f"Position {j+1}", value=experience.get('title', ''), key=f'position_{j+1}_key')
-        timee = st.text_input(f"Zeitraum Erfahrung {j+1}", key=f'experience_time_{j+1}_key')
-        # No LinkedIn data for tasks, so leaving them blank for user input
-        task1 = st.text_area(f"Aufgaben {j+1} - 1", key=f'task_{j+1}_1_key', height=100)
-        task2 = st.text_area(f"Aufgaben {j+1} - 2", key=f'task_{j+1}_2_key', height=100)
-        task3 = st.text_area(f"Aufgaben {j+1} - 3", key=f'task_{j+1}_3_key', height=100)
+
+# If there are experience entries from LinkedIn, use them as default values, otherwise use empty strings
+experience1 = experience_entries[0].get('company', '') if experience_entries else ''
+locatione1 = experience_entries[0].get('location', '') if experience_entries else ''
+position1 = experience_entries[0].get('title', '') if experience_entries else ''
+
+experience2 = experience_entries[1].get('company', '') if len(experience_entries) > 1 else ''
+locatione2 = experience_entries[1].get('location', '') if len(experience_entries) > 1 else ''
+position2 = experience_entries[1].get('title', '') if len(experience_entries) > 1 else ''
+
+experience3 = experience_entries[2].get('company', '') if len(experience_entries) > 2 else ''
+locatione3 = experience_entries[2].get('location', '') if len(experience_entries) > 2 else ''
+position3 = experience_entries[2].get('title', '') if len(experience_entries) > 2 else ''
+
+# Text inputs for professional experience details with pre-populated or empty values
+experience1 = st.text_input("Erfahrung 1", value=experience1, key="unique_key_131")
+locatione1 = st.text_input("Standort Erfahrung 1", value=locatione1, key="unique_key_132")
+position1 = st.text_input("Position 1", value=position1, key="unique_key_133")
+timee1 = st.text_input("Zeitraum Erfahrung 1", key="unique_key_134")
+task11 = st.text_area("Aufgaben 1", key='task11_19', height=100)
+task12 = st.text_area("Aufgaben 2", key='task12_20', height=100)
+task13 = st.text_area("Aufgaben 3", key='task13_21', height=100)
+
+experience2 = st.text_input("Erfahrung 2", value=experience2, key="unique_key_135")
+locatione2 = st.text_input("Standort Erfahrung 2", value=locatione2, key="unique_key_136")
+position2 = st.text_input("Position 2", value=position2, key="unique_key_137")
+timee2 = st.text_input("Zeitraum Erfahrung 2", key="unique_key_138")
+task21 = st.text_area("Aufgaben 1", key='task21_22', height=100)
+task22 = st.text_area("Aufgaben 2", key='task22_23', height=100)
+task23 = st.text_area("Aufgaben 3", key='task23_24', height=100)
+
+experience3 = st.text_input("Erfahrung 3", value=experience3, key="unique_key_139")
+locatione3 = st.text_input("Standort Erfahrung 3", value=locatione3, key="unique_key_140")
+position3 = st.text_input("Position 3", value=position3, key="unique_key_141")
+timee3 = st.text_input("Zeitraum Erfahrung 3", key="unique_key_142")
+task31 = st.text_area("Aufgaben 1", key='task31_25', height=100)
+task32 = st.text_area("Aufgaben 2", key='task32_26', height=100)
+task33 = st.text_area("Aufgaben 3", key='task33_27', height=100)
 
 # Extracurricular Activities / Engagement Section
 st.header("Extracurricular Activities / Engagement")
