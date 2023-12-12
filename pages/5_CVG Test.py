@@ -67,18 +67,31 @@ st.header("Education")
 # Assuming the first two education entries in LinkedIn data (if they exist) are to be used
 education_entries = linkedin_data.get('education', [{} for _ in range(2)])
 
+def format_date(date_dict):
+    """Formats a date dictionary into DD.MM.YYYY format."""
+    if date_dict:
+        day = date_dict.get('day', 1)  # Default to 1 if day is not available
+        month = date_dict.get('month', 1)  # Default to 1 if month is not available
+        year = date_dict.get('year', '')
+        return f"{day:02d}.{month:02d}.{year}" if year else ''
+    return ''
+
 # If there are education entries from LinkedIn, use them as default values, otherwise use empty strings
 university1 = education_entries[0].get('school', '') if education_entries else ''
 locationus1 = education_entries[0].get('location', '') if education_entries else ''
 majorus1 = education_entries[0].get('field_of_study', '') if education_entries else ''
 gpa1 = education_entries[0].get('grade', '') if education_entries else ''
-timeus1 = f"{education_entries[0].get('starts_at', '')} - {education_entries[0].get('ends_at', '')}" if education_entries else ''
+starts_at1 = format_date(education_entries[0].get('starts_at')) if education_entries else ''
+ends_at1 = format_date(education_entries[0].get('ends_at')) if education_entries else ''
+timeus1 = f"{starts_at1} - {ends_at1}" if ends_at1 else starts_at1
 
 university2 = education_entries[1].get('school', '') if len(education_entries) > 1 else ''
 locationus2 = education_entries[1].get('location', '') if len(education_entries) > 1 else ''
 majorus2 = education_entries[1].get('field_of_study', '') if len(education_entries) > 1 else ''
 gpa2 = education_entries[1].get('grade', '') if len(education_entries) > 1 else ''
-timeus2 = f"{education_entries[1].get('starts_at', '')} - {education_entries[1].get('ends_at', '')}" if len(education_entries) > 1 else ''
+starts_at2 = format_date(education_entries[1].get('starts_at')) if len(education_entries) > 1 else ''
+ends_at2 = format_date(education_entries[1].get('ends_at')) if len(education_entries) > 1 else ''
+timeus2 = f"{starts_at2} - {ends_at2}" if ends_at2 else starts_at2
 
 # Text inputs for education details with pre-populated or empty values
 university1 = st.text_input("Universität/Schule 1", value=university1, key="unique_key_5")
