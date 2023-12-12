@@ -24,7 +24,6 @@ st.subheader("HOW IT WORKS")
 st.info("1. Determine which industry suits you best by taking our test based on the Industry Fit Assessment.")
 st.info("2. Choose the industry you want your CV to be tailored to by going to the CV Generator and choosing the industry.")
 st.info("3. If you already know which industry to apply for, you can directly go to the CV Generator and choose the corresponding industry.")
-st.info("4. Insert your data by easily importing it from LinkedIn to streamline your CV creation process!")
 
 st.subheader("What is the Industry Fit Assessment?")
 
