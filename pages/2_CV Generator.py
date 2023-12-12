@@ -19,9 +19,6 @@ with tabs[0]:
     # Streamlit-Benutzeroberfläche
     st.title("Consulting 🧮")
 
-    # API Anbindung
-    st.button("Get your input via LinkedIn", key="unique_key_0")
-
     # Persönliche Informationen
     st.header("Personal Information")
     name = st.text_input("Name", key="unique_key_1")
