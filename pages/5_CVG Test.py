@@ -93,7 +93,7 @@ starts_at2 = format_date(education_entries[1].get('starts_at')) if len(education
 ends_at2 = format_date(education_entries[1].get('ends_at')) if len(education_entries) > 1 else ''
 timeus2 = f"{starts_at2} - {ends_at2}" if ends_at2 else starts_at2
 
-with st.expander("Education", expanded=True):  # 'expanded=True' means the section will be expanded by default
+with st.expander("Education", expanded=False):  # 'expanded=True' means the section will be expanded by default
     university1 = st.text_input("Universität/Schule 1", value=university1, key="unique_key_5")
     locationus1 = st.text_input("Standort 1", value=locationus1, key="unique_key_6")
     majorus1 = st.text_input("Studiengang 1", value=majorus1, key="unique_key_7")
