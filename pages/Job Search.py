@@ -29,7 +29,7 @@ if 'jobs' not in st.session_state:
 # Title and logo layout
 header_col, logo_col = st.columns([0.85, 0.1])
 with header_col:
-    st.header("Job Search")
+    st.markdown("# **Job Search**")  # Markdown for bold header
 with logo_col:
     st.image(logo_url, width=60)  # Adjust width as needed
 
