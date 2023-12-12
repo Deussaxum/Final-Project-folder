@@ -1566,7 +1566,7 @@ with tabs[5]:
         locatione1 = st.text_input("Standort Erfahrung 1", value=locatione1, key="unique_key_276")
         position1 = st.text_input("Position 1", value=position1, key="unique_key_277")
         timee1 = st.text_input("Zeitraum Erfahrung 1", value=timee1, key="unique_key_278")
-        task11 = st.text_area("Aufgaben 1", key='task11_46', height=100)
+        task11 = st.text_area("Aufgaben 1", key='task11_89', height=100)
         task12 = st.text_area("Aufgaben 2", key='task12_47', height=100)
         task13 = st.text_area("Aufgaben 3", key='task13_48', height=100)
 
