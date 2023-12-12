@@ -32,6 +32,9 @@ def retrieve_info(linkedin_profile_url):
         st.error(f"Failed to retrieve profile information: HTTP {response.status_code}")
         return None
 
+# Initialize linkedin_data as an empty dictionary
+linkedin_data = {}
+
 # Streamlit app layout
 st.title("CV Generator 📃")
 linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='linkedin_url')
@@ -39,6 +42,7 @@ linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='lin
 if st.button('Retrieve LinkedIn Data'):
     linkedin_data = retrieve_info(linkedin_profile_url) or {}
 
+# Use linkedin_data.get() for default values to avoid NameError
 # Personal Information Section
 st.header("Personal Information")
 name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='name')
@@ -50,7 +54,7 @@ email = st.text_input("Email", key='email')
 st.header("Education")
 for i in range(2):  # Assuming up to 2 education entries
     with st.expander(f"Education {i+1}"):
-        education = linkedin_data.get('education', [{}])[i] if i < len(linkedin_data.get('education', [])) else {}
+        education = linkedin_data.get('education', [{}])[i] if i < len(linkin_data.get('education', [])) else {}
         university = st.text_input(f"University/School {i+1}", value=education.get('school', ''), key=f'university_{i}')
         degree = st.text_input(f"Degree {i+1}", value=education.get('degree_name', ''), key=f'degree_{i}')
         field_of_study = st.text_input(f"Field of Study {i+1}", value=education.get('field_of_study', ''), key=f'field_of_study_{i}')
