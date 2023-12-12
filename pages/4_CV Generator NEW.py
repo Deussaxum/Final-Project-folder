@@ -903,20 +903,20 @@ with tabs[3]:
     st.header("Persönliche Informationen")
 
     # Retrieve individual address components, defaulting to an empty string if not found
-    city = linkedin_data.get('city', '')
-    state = linkedin_data.get('state', '')
-    country = linkedin_data.get('country', '')
+    with st.expander("Persönliche Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
+        city = linkedin_data.get('city', '')
+        state = linkedin_data.get('state', '')
+        country = linkedin_data.get('country', '')
 
-    # Construct the address string, only including components that are present
-    address_components = [comp for comp in [city, state, country] if comp]  # List comprehension to filter out empty components
-    formatted_address = ', '.join(address_components)  # Join the components with a comma only if they are present
+        # Construct the address string, only including components that are present
+        address_components = [comp for comp in [city, state, country] if comp]  # List comprehension to filter out empty components
+        formatted_address = ', '.join(address_components)  # Join the components with a comma only if they are present
 
-    # Streamlit text input fields
-    name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='name_key_4')
-    address = st.text_input("Adresse", value=formatted_address, key='address_key_4')
-    phone = st.text_input("Telefonnummer", key='phone_key_4')
-    email = st.text_input("E-Mail", key='email_key_4')
-
+        # Streamlit text input fields
+        name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='name_key_4')
+        address = st.text_input("Adresse", value=formatted_address, key='address_key_4')
+        phone = st.text_input("Telefonnummer", key='phone_key_4')
+        email = st.text_input("E-Mail", key='email_key_4')
 
     # Education Section
     st.header("Education")
@@ -1183,20 +1183,20 @@ with tabs[4]:
     st.header("Persönliche Informationen")
 
     # Retrieve individual address components, defaulting to an empty string if not found
-    city = linkedin_data.get('city', '')
-    state = linkedin_data.get('state', '')
-    country = linkedin_data.get('country', '')
+    with st.expander("Persönliche Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
+        city = linkedin_data.get('city', '')
+        state = linkedin_data.get('state', '')
+        country = linkedin_data.get('country', '')
 
-    # Construct the address string, only including components that are present
-    address_components = [comp for comp in [city, state, country] if comp]  # List comprehension to filter out empty components
-    formatted_address = ', '.join(address_components)  # Join the components with a comma only if they are present
+        # Construct the address string, only including components that are present
+        address_components = [comp for comp in [city, state, country] if comp]  # List comprehension to filter out empty components
+        formatted_address = ', '.join(address_components)  # Join the components with a comma only if they are present
 
-    # Streamlit text input fields
-    name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='name_key_5')
-    address = st.text_input("Adresse", value=formatted_address, key='address_key_5')
-    phone = st.text_input("Telefonnummer", key='phone_key_5')
-    email = st.text_input("E-Mail", key='email_key_5')
-
+        # Streamlit text input fields
+        name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='name_key_5')
+        address = st.text_input("Adresse", value=formatted_address, key='address_key_5')
+        phone = st.text_input("Telefonnummer", key='phone_key_5')
+        email = st.text_input("E-Mail", key='email_key_5')
 
     # Education Section
     st.header("Education")
@@ -1463,19 +1463,20 @@ with tabs[5]:
     st.header("Persönliche Informationen")
 
     # Retrieve individual address components, defaulting to an empty string if not found
-    city = linkedin_data.get('city', '')
-    state = linkedin_data.get('state', '')
-    country = linkedin_data.get('country', '')
+    with st.expander("Persönliche Informationen", expanded=False):  # 'expanded=True' means the section will be expanded by default
+        city = linkedin_data.get('city', '')
+        state = linkedin_data.get('state', '')
+        country = linkedin_data.get('country', '')
 
-    # Construct the address string, only including components that are present
-    address_components = [comp for comp in [city, state, country] if comp]  # List comprehension to filter out empty components
-    formatted_address = ', '.join(address_components)  # Join the components with a comma only if they are present
+        # Construct the address string, only including components that are present
+        address_components = [comp for comp in [city, state, country] if comp]  # List comprehension to filter out empty components
+        formatted_address = ', '.join(address_components)  # Join the components with a comma only if they are present
 
-    # Streamlit text input fields
-    name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='name_key_6')
-    address = st.text_input("Adresse", value=formatted_address, key='address_key_6')
-    phone = st.text_input("Telefonnummer", key='phone_key_6')
-    email = st.text_input("E-Mail", key='email_key_6')
+        # Streamlit text input fields
+        name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='name_key_6')
+        address = st.text_input("Adresse", value=formatted_address, key='address_key_6')
+        phone = st.text_input("Telefonnummer", key='phone_key_6')
+        email = st.text_input("E-Mail", key='email_key_6')
 
 
     # Education Section
@@ -1696,6 +1697,3 @@ with tabs[5]:
             st.error("Die LaTeX-Vorlagendatei wurde nicht gefunden.")
         except Exception as e:
             st.error(f"Ein unerwarteter Fehler ist aufgetreten: {e}")
-
-
-
