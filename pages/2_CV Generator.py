@@ -83,7 +83,7 @@ with tabs[0]:
     st.header("Skills & Interest")
     languages1 = st.text_input("Sprachen", key="unique_key_33")
     computer1 = st.text_input("Computerkenntnisse", key="unique_key_34")
-    interests1 = st.text_input("Interesse   n", key="unique_key_35")
+    interests1 = st.text_input("Interessen", key="unique_key_35")
 
     # Button zum Erstellen des CVs
     if st.button("CV Erstellen", key="unique_key_36"):
