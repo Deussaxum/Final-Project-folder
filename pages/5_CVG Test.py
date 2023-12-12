@@ -93,22 +93,22 @@ starts_at2 = format_date(education_entries[1].get('starts_at')) if len(education
 ends_at2 = format_date(education_entries[1].get('ends_at')) if len(education_entries) > 1 else ''
 timeus2 = f"{starts_at2} - {ends_at2}" if ends_at2 else starts_at2
 
-# Text inputs for education details with pre-populated or empty values
-university1 = st.text_input("Universität/Schule 1", value=university1, key="unique_key_5")
-locationus1 = st.text_input("Standort 1", value=locationus1, key="unique_key_6")
-majorus1 = st.text_input("Studiengang 1", value=majorus1, key="unique_key_7")
-timeus1 = st.text_input("Zeitraum 1", value=timeus1, key="unique_key_8")
-courses1 = st.text_input("Kurse 1", key="unique_key_9")
-gpa1 = st.text_input("GPA 1", value=gpa1, key="unique_key_10")
-clubs1 = st.text_input("Clubs/Aktivitäten 1", key="unique_key_11")
+with st.expander("Education", expanded=True):  # 'expanded=True' means the section will be expanded by default
+    university1 = st.text_input("Universität/Schule 1", value=university1, key="unique_key_5")
+    locationus1 = st.text_input("Standort 1", value=locationus1, key="unique_key_6")
+    majorus1 = st.text_input("Studiengang 1", value=majorus1, key="unique_key_7")
+    timeus1 = st.text_input("Zeitraum 1", value=timeus1, key="unique_key_8")
+    courses1 = st.text_input("Kurse 1", key="unique_key_9")
+    gpa1 = st.text_input("GPA 1", value=gpa1, key="unique_key_10")
+    clubs1 = st.text_input("Clubs/Aktivitäten 1", key="unique_key_11")
 
-university2 = st.text_input("Universität/Schule 2", value=university2, key="unique_key_12")
-locationus2 = st.text_input("Standort 2", value=locationus2, key="unique_key_13")
-majorus2 = st.text_input("Studiengang 2", value=majorus2, key="unique_key_14")
-timeus2 = st.text_input("Zeitraum 2", value=timeus2, key="unique_key_15")
-courses2 = st.text_input("Kurse 2", key="unique_key_16")
-gpa2 = st.text_input("GPA 2", value=gpa2, key="unique_key_17")
-clubs2 = st.text_input("Clubs/Aktivitäten 2", key="unique_key_18")
+    university2 = st.text_input("Universität/Schule 2", value=university2, key="unique_key_12")
+    locationus2 = st.text_input("Standort 2", value=locationus2, key="unique_key_13")
+    majorus2 = st.text_input("Studiengang 2", value=majorus2, key="unique_key_14")
+    timeus2 = st.text_input("Zeitraum 2", value=timeus2, key="unique_key_15")
+    courses2 = st.text_input("Kurse 2", key="unique_key_16")
+    gpa2 = st.text_input("GPA 2", value=gpa2, key="unique_key_17")
+    clubs2 = st.text_input("Clubs/Aktivitäten 2", key="unique_key_18")
 
 # Professional Experience Section
 st.header("Professional Experience")
