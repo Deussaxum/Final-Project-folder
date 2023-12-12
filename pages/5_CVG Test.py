@@ -178,11 +178,6 @@ computer1 = st.text_input("Computerkenntnisse", value=computer_skills_combined, 
 interests1 = st.text_input("Interessen", value=interests_combined, key="interests_1_key")
 
 
-# Text inputs for skills and interests details with pre-populated or empty values
-languages1 = st.text_input("Sprachen", value=languages_combined, key="languages_1_key")
-computer1 = st.text_input("Computerkenntnisse", value=computer_skills_combined, key="computer_skills_key")
-interests1 = st.text_input("Interessen", value=interests_combined, key="interests_1_key")
-
 # Button to create the CV
 if st.button("Create CV", key='create_cv_button'):
     # Logic to create and display/download the CV
