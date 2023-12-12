@@ -1,7 +1,47 @@
 import streamlit as st
+import requests
 
-st.title("CV Generator 📃")
+# Define your API key and headers
+api_key = 'your_api_key_here'  # Replace with your actual API key
+headers = {'Authorization': f'Bearer {api_key}'}
+api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
 
+# Streamlit app layout
+st.set_page_config(layout="wide")
+
+# App title
+st.title('CV Generator 📃')
+
+# LinkedIn profile URL input field
+linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='linkedin_url')
+
+# Function to extract information from API response
+def extract_info(jsondata):
+    extracted_info = {
+        'full_name': jsondata.get('full_name', ''),
+        'city': jsondata.get('city', ''),
+        'experiences': jsondata.get('experiences', [])
+    }
+    return extracted_info
+
+# Function to retrieve information
+def retrieve_info(linkedin_profile_url):
+    params = {'linkedin_profile_url': linkedin_profile_url}
+    response = requests.get(api_endpoint, params=params, headers=headers)
+    if response.status_code == 200:
+        data = response.json()
+        return extract_info(data)
+    else:
+        st.error(f"Failed to retrieve profile information: HTTP {response.status_code}")
+        return {}
+
+# Button to trigger the information retrieval
+if st.button('Get your input via LinkedIn'):
+    linkedin_data = retrieve_info(linkedin_profile_url)
+else:
+    linkedin_data = {}
+
+# Define tabs
 tab_titles = [
     "Consulting 🧮",
     "Finance 📈",
@@ -10,80 +50,36 @@ tab_titles = [
     "IT 🖥",
     "Academic 📚"
 ]
+tabs = st.tabs(tab_titles)
 
-tabs=st.tabs(tab_titles)
+# Iterate over each tab and set up the corresponding input fields
+for index, title in enumerate(tab_titles):
+    with tabs[index]:
+        st.header(f"{title} - Personal Information")
+        # You can replace 'consulting' with the sector name as needed for different tabs
+        name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key=f"{title}_name")
+        address = st.text_input("Adresse", key=f"{title}_address")
+        phone = st.text_input("Telefonnummer", key=f"{title}_phone")
+        email = st.text_input("E-Mail", key=f"{title}_email")
 
-with tabs[0]:
-    import streamlit as st
+        st.header(f"{title} - Education")
+        # Add education input fields
 
-    # Streamlit-Benutzeroberfläche
-    st.title("Consulting 🧮")
+        st.header(f"{title} - Professional Experience")
+        # Add professional experience input fields
 
-    # API Anbindung
-    st.button("Get your input via LinkedIn", key="unique_key_0")
+        st.header(f"{title} - Extracurricular Activities / Engagement")
+        # Add extracurricular activities input fields
 
-    # Persönliche Informationen
-    st.header("Personal Information")
-    name = st.text_input("Name", key="unique_key_1")
-    address = st.text_input("Adresse", key="unique_key_2")
-    phone = st.text_input("Telefonnummer", key="unique_key_3")
-    email = st.text_input("E-Mail", key="unique_key_4")
+        st.header(f"{title} - Skills & Interest")
+        # Add skills & interest input fields
 
-    # Education
-    st.header("Education")
-    university1 = st.text_input("Universität/Schule 1", key="unique_key_5")
-    locationus1 = st.text_input("Standort 1", key="unique_key_6")
-    majorus1 = st.text_input("Studiengang 1", key="unique_key_7")
-    timeus1 = st.text_input("Zeitraum 1", key="unique_key_8")
-    courses1 = st.text_input("Kurse 1", key="unique_key_9")
-    gpa1 = st.text_input("GPA 1", key="unique_key_10")
-    clubs1 = st.text_input("Clubs/Aktivitäten 1", key="unique_key_11")
+        if st.button("CV Erstellen", key=f"{title}_create_cv"):
+            # Add logic to create CV
+            pass
 
-    university2 = st.text_input("Universität/Schule 2", "", key="unique_key_12")
-    locationus2 = st.text_input("Standort 2", "", key="unique_key_13")
-    majorus2 = st.text_input("Studiengang 2", "", key="unique_key_14")
-    timeus2 = st.text_input("Zeitraum 2", "", key="unique_key_15")
-    courses2 = st.text_input("Kurse 2", "", key="unique_key_16")
-    gpa2 = st.text_input("GPA 2", "", key="unique_key_17")
-    clubs2 = st.text_input("Clubs/Aktivitäten 2", "", key="unique_key_18")
+# Remember to replace 'your_api_key_here' with your actual LinkedIn API key
 
-    # Professional Experience
-    st.header("Professional Experience")
-    experience1 = st.text_input("Erfahrung 1", key="unique_key_19")
-    locatione1 = st.text_input("Standort Erfahrung 1", key="unique_key_20")
-    position1 = st.text_input("Position 1", key="unique_key_21!")
-    timee1 = st.text_input("Zeitraum Erfahrung 1", key="unique_key_22")
-    task11 = st.text_area("Aufgaben 1", key='task11_1', height=100)
-    task12 = st.text_area("Aufgaben 2", key='task12_2', height=100)
-    task13 = st.text_area("Aufgaben 3", key='task13_3', height=100)
-
-    experience2 = st.text_input("Erfahrung 2", "", key="unique_key_23")
-    locatione2 = st.text_input("Standort Erfahrung 2", "", key="unique_key_24")
-    position2 = st.text_input("Position 2", "", key="position_2_key")
-    timee2 = st.text_input("Zeitraum Erfahrung 2", "", key="unique_key_25")
-    task21 = st.text_area("Aufgaben 1", key='task21_4', height=100)
-    task22 = st.text_area("Aufgaben 2", key='task22_5', height=100)
-    task23 = st.text_area("Aufgaben 3", key='task23_6', height=100)
-
-    experience3 = st.text_input("Erfahrung 3", "", key="unique_key_26")
-    locatione3 = st.text_input("Standort Erfahrung 3", "", key="unique_key_27")
-    position3 = st.text_input("Position 3", "", key="unique_key_28")
-    timee3 = st.text_input("Zeitraum Erfahrung 3", "", key="unique_key_29")
-    task31 = st.text_area("Aufgaben 1", key='task31_7', height=100)
-    task32 = st.text_area("Aufgaben 2", key='task32_8', height=100)
-    task33 = st.text_area("Aufgaben 3", key='task33_9', height=100)
-
-    # Extracurricular Activities / Engagement
-    st.header("Extracurricular Activities / Engagement")
-    extracurricular1 = st.text_input("Extrakurrikulare Aktivitäten", key="unique_key_30")
-    additionaleducation1 = st.text_input("Zusätzliche Bildung", key="unique_key_31")
-    certificates1 = st.text_input("Zertifikate und Errungenschaften", key="unique_key_32")
-
-    # Skills & Interest
-    st.header("Skills & Interest")
-    languages1 = st.text_input("Sprachen", key="unique_key_33")
-    computer1 = st.text_input("Computerkenntnisse", key="unique_key_34")
-    interests1 = st.text_input("Interesse   n", key="unique_key_35")
 
     # Button zum Erstellen des CVs
     if st.button("CV Erstellen", key="unique_key_36"):
