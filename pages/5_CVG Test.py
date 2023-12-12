@@ -51,18 +51,38 @@ email = st.text_input("E-Mail", key='email_key')
 
 # Education Section
 st.header("Education")
+
 # Assuming the first two education entries in LinkedIn data (if they exist) are to be used
 education_entries = linkedin_data.get('education', [{} for _ in range(2)])
-for i in range(2):
-    with st.expander(f"Education {i+1}"):
-        education = education_entries[i]
-        university = st.text_input(f"Universität/Schule {i+1}", value=education.get('school', ''), key=f'university_{i+1}_key')
-        locationus = st.text_input(f"Standort {i+1}", value=education.get('location', ''), key=f'location_{i+1}_key')
-        majorus = st.text_input(f"Studiengang {i+1}", value=education.get('field_of_study', ''), key=f'major_{i+1}_key')
-        timeus = st.text_input(f"Zeitraum {i+1}", key=f'time_{i+1}_key')  # No LinkedIn data for the time period
-        courses = st.text_input(f"Kurse {i+1}", key=f'courses_{i+1}_key')  # No LinkedIn data for courses
-        gpa = st.text_input(f"GPA {i+1}", value=education.get('grade', ''), key=f'gpa_{i+1}_key')
-        clubs = st.text_input(f"Clubs/Aktivitäten {i+1}", key=f'clubs_{i+1}_key')  # No LinkedIn data for clubs/activities
+
+# If there are education entries from LinkedIn, use them as default values, otherwise use empty strings
+university1 = education_entries[0].get('school', '') if education_entries else ''
+locationus1 = education_entries[0].get('location', '') if education_entries else ''
+majorus1 = education_entries[0].get('field_of_study', '') if education_entries else ''
+gpa1 = education_entries[0].get('grade', '') if education_entries else ''
+
+university2 = education_entries[1].get('school', '') if len(education_entries) > 1 else ''
+locationus2 = education_entries[1].get('location', '') if len(education_entries) > 1 else ''
+majorus2 = education_entries[1].get('field_of_study', '') if len(education_entries) > 1 else ''
+gpa2 = education_entries[1].get('grade', '') if len(education_entries) > 1 else ''
+
+# Text inputs for education details with pre-populated or empty values
+university1 = st.text_input("Universität/Schule 1", value=university1, key="unique_key_5")
+locationus1 = st.text_input("Standort 1", value=locationus1, key="unique_key_6")
+majorus1 = st.text_input("Studiengang 1", value=majorus1, key="unique_key_7")
+timeus1 = st.text_input("Zeitraum 1", key="unique_key_8")  # No LinkedIn data for the time period
+courses1 = st.text_input("Kurse 1", key="unique_key_9")  # No LinkedIn data for courses
+gpa1 = st.text_input("GPA 1", value=gpa1, key="unique_key_10")
+clubs1 = st.text_input("Clubs/Aktivitäten 1", key="unique_key_11")  # No LinkedIn data for clubs/activities
+
+university2 = st.text_input("Universität/Schule 2", value=university2, key="unique_key_12")
+locationus2 = st.text_input("Standort 2", value=locationus2, key="unique_key_13")
+majorus2 = st.text_input("Studiengang 2", value=majorus2, key="unique_key_14")
+timeus2 = st.text_input("Zeitraum 2", key="unique_key_15")  # No LinkedIn data for the time period
+courses2 = st.text_input("Kurse 2", key="unique_key_16")  # No LinkedIn data for courses
+gpa2 = st.text_input("GPA 2", value=gpa2, key="unique_key_17")
+clubs2 = st.text_input("Clubs/Aktivitäten 2", key="unique_key_18")  # No LinkedIn data for clubs/activities
+
 
 # Professional Experience Section
 st.header("Professional Experience")
