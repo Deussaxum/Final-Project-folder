@@ -72,28 +72,30 @@ university1 = education_entries[0].get('school', '') if education_entries else '
 locationus1 = education_entries[0].get('location', '') if education_entries else ''
 majorus1 = education_entries[0].get('field_of_study', '') if education_entries else ''
 gpa1 = education_entries[0].get('grade', '') if education_entries else ''
+timeus1 = f"{education_entries[0].get('starts_at', '')} - {education_entries[0].get('ends_at', '')}" if education_entries else ''
 
 university2 = education_entries[1].get('school', '') if len(education_entries) > 1 else ''
 locationus2 = education_entries[1].get('location', '') if len(education_entries) > 1 else ''
 majorus2 = education_entries[1].get('field_of_study', '') if len(education_entries) > 1 else ''
 gpa2 = education_entries[1].get('grade', '') if len(education_entries) > 1 else ''
+timeus2 = f"{education_entries[1].get('starts_at', '')} - {education_entries[1].get('ends_at', '')}" if len(education_entries) > 1 else ''
 
 # Text inputs for education details with pre-populated or empty values
 university1 = st.text_input("Universität/Schule 1", value=university1, key="unique_key_5")
 locationus1 = st.text_input("Standort 1", value=locationus1, key="unique_key_6")
 majorus1 = st.text_input("Studiengang 1", value=majorus1, key="unique_key_7")
-timeus1 = st.text_input("Zeitraum 1", key="unique_key_8")  # No LinkedIn data for the time period
-courses1 = st.text_input("Kurse 1", key="unique_key_9")  # No LinkedIn data for courses
+timeus1 = st.text_input("Zeitraum 1", value=timeus1, key="unique_key_8")
+courses1 = st.text_input("Kurse 1", key="unique_key_9")
 gpa1 = st.text_input("GPA 1", value=gpa1, key="unique_key_10")
-clubs1 = st.text_input("Clubs/Aktivitäten 1", key="unique_key_11")  # No LinkedIn data for clubs/activities
+clubs1 = st.text_input("Clubs/Aktivitäten 1", key="unique_key_11")
 
 university2 = st.text_input("Universität/Schule 2", value=university2, key="unique_key_12")
 locationus2 = st.text_input("Standort 2", value=locationus2, key="unique_key_13")
 majorus2 = st.text_input("Studiengang 2", value=majorus2, key="unique_key_14")
-timeus2 = st.text_input("Zeitraum 2", key="unique_key_15")  # No LinkedIn data for the time period
-courses2 = st.text_input("Kurse 2", key="unique_key_16")  # No LinkedIn data for courses
+timeus2 = st.text_input("Zeitraum 2", value=timeus2, key="unique_key_15")
+courses2 = st.text_input("Kurse 2", key="unique_key_16")
 gpa2 = st.text_input("GPA 2", value=gpa2, key="unique_key_17")
-clubs2 = st.text_input("Clubs/Aktivitäten 2", key="unique_key_18")  # No LinkedIn data for clubs/activities
+clubs2 = st.text_input("Clubs/Aktivitäten 2", key="unique_key_18")
 
 # Professional Experience Section
 st.header("Professional Experience")
