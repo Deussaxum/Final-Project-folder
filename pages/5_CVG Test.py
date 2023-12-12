@@ -172,6 +172,9 @@ with st.expander("Professional Experience", expanded=True):  # 'expanded=True' m
     task32 = st.text_area("Aufgaben 2", key='task32_26', height=100)
     task33 = st.text_area("Aufgaben 3", key='task33_27', height=100)
 
+# Extracurricular Activities / Engagement Section
+st.header("Extracurricular Activities / Engagement")
+
 with st.expander("Extracurricular Activities / Engagement", expanded=True):  # 'expanded=True' means the section will be expanded by default
     # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
     volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
