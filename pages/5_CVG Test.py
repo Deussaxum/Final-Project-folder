@@ -160,16 +160,21 @@ certificates1 = st.text_input("Zertifikate und Errungenschaften", value=certific
 # Skills & Interest Section
 st.header("Skills & Interest")
 
-# For languages and interests, we consider only the first entry for simplicity, as the Streamlit UI currently does not support dynamic lists well
-languages1 = languages_entries[0] if languages_entries else ''
-interests1 = interests_entries[0] if interests_entries else ''
+# Retrieve the computer skills entries from LinkedIn data if they exist
+computer_skills_entries = linkedin_data.get('computer_skills', [''])  # Assuming it's a list of entries
+
+# Join the first three entries for languages, interests, and computer skills with a comma
+languages_combined = ', '.join(languages_entries[0:3])
+interests_combined = ', '.join(interests_entries[0:3])
+computer_skills_combined = ', '.join(computer_skills_entries[0:3])
 
 # Text inputs for skills and interests details with pre-populated or empty values
-languages1 = st.text_input("Sprachen", value=languages1, key="languages_1_key")
-computer1 = st.text_input("Computerkenntnisse", key="computer_skills_key")
-interests1 = st.text_input("Interessen", value=interests1, key="interests_1_key")
+languages1 = st.text_input("Sprachen", value=languages_combined, key="languages_1_key")
+computer1 = st.text_input("Computerkenntnisse", value=computer_skills_combined, key="computer_skills_key")
+interests1 = st.text_input("Interessen", value=interests_combined, key="interests_1_key")
 
 # Button to create the CV
 if st.button("Create CV", key='create_cv_button'):
     # Logic to create and display/download the CV
     pass
+
