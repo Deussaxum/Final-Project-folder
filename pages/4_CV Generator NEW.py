@@ -1147,7 +1147,7 @@ with tabs[4]:
         linkedin_data = retrieve_info(linkedin_profile_url) or {}
 
     # Personal Information Section
-    st.header("Personal Information")
+    st.header("Your CV, Your Story: Complete the Chapters")
 
     # Retrieve individual address components, defaulting to an empty string if not found
     with st.expander("Personal Information", expanded=False):  # 'expanded=True' means the section will be expanded by default
@@ -1166,8 +1166,6 @@ with tabs[4]:
         email = st.text_input("E-Mail", key='email_key_5')
 
     # Education Section
-    st.header("Education")
-
     # Assuming the first two education entries in LinkedIn data (if they exist) are to be used
     education_entries = linkedin_data.get('education', [{} for _ in range(2)])
 
@@ -1215,8 +1213,6 @@ with tabs[4]:
         clubs2 = st.text_input("Clubs/Activities 2", key="unique_key_238")
 
     # Professional Experience Section
-    st.header("Professional Experience")
-
     def format_date(date_dict):
         """Formats a date dictionary into DD.MM.YYYY format."""
         if date_dict:
@@ -1277,8 +1273,6 @@ with tabs[4]:
         task33 = st.text_area("Tasks 3", key='task33_63', height=100)
 
     # Extracurricular Activities / Engagement Section
-    st.header("Extracurricular Activities")
-
     with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
         volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
@@ -1299,8 +1293,6 @@ with tabs[4]:
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_5_key")
 
     # Skills & Interest Section
-    st.header("Skills & Interest")
-
     # Wrap the Skills & Interest section in an expander
     with st.expander("Skills & Interest", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the computer skills entries from LinkedIn data if they exist
@@ -1427,7 +1419,7 @@ with tabs[5]:
         linkedin_data = retrieve_info(linkedin_profile_url) or {}
 
     # Personal Information Section
-    st.header("Personal Information")
+    st.header("Your CV, Your Story: Complete the Chapters")
 
     # Retrieve individual address components, defaulting to an empty string if not found
     with st.expander("Personal Information", expanded=False):  # 'expanded=True' means the section will be expanded by default
@@ -1447,8 +1439,6 @@ with tabs[5]:
 
 
     # Education Section
-    st.header("Education")
-
     # Assuming the first two education entries in LinkedIn data (if they exist) are to be used
     education_entries = linkedin_data.get('education', [{} for _ in range(2)])
 
@@ -1496,8 +1486,6 @@ with tabs[5]:
         clubs2 = st.text_input("Clubs/Activities 2", key="unique_key_274")
 
     # Professional Experience Section
-    st.header("Professional Experience")
-
     def format_date(date_dict):
         """Formats a date dictionary into DD.MM.YYYY format."""
         if date_dict:
@@ -1558,8 +1546,6 @@ with tabs[5]:
         task33 = st.text_area("Tasks 3", key='task33_97', height=100)
 
     # Extracurricular Activities / Engagement Section
-    st.header("Extracurricular Activities")
-
     with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
         volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
@@ -1580,8 +1566,6 @@ with tabs[5]:
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_6_key")
 
     # Skills & Interest Section
-    st.header("Skills & Interest")
-
     # Wrap the Skills & Interest section in an expander
     with st.expander("Skills & Interest", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the computer skills entries from LinkedIn data if they exist
