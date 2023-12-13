@@ -35,6 +35,34 @@ st.info("""
     The results are presented in a visually accessible format, utilizing diagrams to illustrate your skills and personality traits. Here you can see some examples for such diagrams: 
 """)
 
+local_image_path1 = "/Applications/DustinDia1.png"
+local_image_path2 = "/Applications/DustinDia2.jpg"
+local_image_path3 = "/Applications/DustinDia3.png"
+local_image_path4 = "/Applications/DustinDia4.png"
+col1, col2 = st.columns(2)
+
+# Box 1
+with col1:
+    
+    st.image(local_image_path1)
+  
+
+# Box 2
+with col2:
+   
+    st.image(local_image_path2)
+   
+
+# Box 3
+with col1:
+  
+    st.image(local_image_path3)
+    
+
+# Box 4
+with col2:
+   
+    st.image(local_image_path4)
   
 common_image_url1 = "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 common_image_url2 = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -80,5 +108,9 @@ with col2:
     st.image(common_image_url7)
     st.write("In a startup, you typically wear multiple hats, taking on various responsibilities that can range from strategic planning to hands-on execution. Your role may involve setting direction, creating culture, and driving growth, all while adapting to the fast-paced and ever-changing startup environment.")
 
-
+# Box 7
+with col1:
+    st.subheader("Law 👨🏼‍⚖️")
+    st.image(common_image_url7)
+    st.write("As a lawyer, you will engage in a variety of tasks and responsibilities - your main one will be defending your clients. There are different areas in which you can work as a lawyer, one example is tax law.")
 
