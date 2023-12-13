@@ -56,7 +56,7 @@ def plot_radar_chart(categories, scores, title, figure_size=(1.5, 1.5), dpi=2000
     img_data.seek(0)
 
     # Display the high-resolution image using st.image
-    st.image(img_data, width=500)
+    st.image(img_data, width=700)
 
 # Function to create a bar chart with customizable size, resolution, and fontsize
 def plot_bar_chart(labels, values, title, figure_size=(8, 4), dpi=1500, label_fontsize=12, title_fontsize=14):
@@ -112,7 +112,7 @@ def get_responses_from_sliders(sliders):
 # Main function
 def main():
     st.image('360_F_209798420_6ZbtGqBjmzQlaiEET1eDWJnBwPLBa8XW.jpg',
-             width=1200, use_column_width='true')  # This will display the image as a header
+             width=800, use_column_width='true')  # This will display the image as a header
     st.title("Career Fit Assessment Tool\n Assessment of Industry Fit based on Big 5 Personality Traits, Skills, and Work-Life Balance")
 
     # Big Five Personality Questions
