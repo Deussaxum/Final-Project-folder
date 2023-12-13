@@ -56,7 +56,7 @@ def plot_radar_chart(categories, scores, title, figure_size=(1.5, 1.5), dpi=2000
     img_data.seek(0)
 
     # Display the high-resolution image using st.image
-    st.image(img_data, width=800)
+    st.image(img_data, width=500)
 
 # Function to create a bar chart with customizable size, resolution, and fontsize
 def plot_bar_chart(labels, values, title, figure_size=(8, 4), dpi=1500, label_fontsize=12, title_fontsize=14):
