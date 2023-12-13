@@ -6,7 +6,6 @@ import io
 # Set Streamlit theme to a colorful and attractive style
 st.set_page_config(
     page_title="Career Fit Assessment Tool",
-    page_icon="🌟",
     layout="wide",
 )
 
@@ -112,7 +111,7 @@ def get_responses_from_sliders(sliders):
 
 # Main function
 def main():
-    st.image('Deussaxum/Final-Project-folder/360_F_209798420_6ZbtGqBjmzQlaiEET1eDWJnBwPLBa8XW.jpg',
+    st.image('360_F_209798420_6ZbtGqBjmzQlaiEET1eDWJnBwPLBa8XW.jpg',
              width=1200, use_column_width='true')  # This will display the image as a header
     st.title("Career Fit Assessment Tool\n Assessment of Industry Fit based on Big 5 Personality Traits, Skills, and Work-Life Balance")
 
