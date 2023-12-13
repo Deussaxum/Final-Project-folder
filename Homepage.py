@@ -114,3 +114,4 @@ with col1:
     st.image(common_image_url7)
     st.write("As a lawyer, you will engage in a variety of tasks and responsibilities - your main one will be defending your clients. There are different areas in which you can work as a lawyer, one example is tax law.")
 
+st.sidebar.success("Please select a page Above.")
