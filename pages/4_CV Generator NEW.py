@@ -57,7 +57,7 @@ with tabs[0]:
         linkedin_data = retrieve_info(linkedin_profile_url) or {}
 
     # Personal Information Section
-    st.header('Enter your Information below')
+    st.header('Your CV, Your Story: Complete the Chapters')
     with st.expander("Personal Information", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve individual address components, defaulting to an empty string if not found
         city = linkedin_data.get('city', '')
