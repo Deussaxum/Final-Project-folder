@@ -6,9 +6,9 @@ st.set_page_config(
 )
 
 
-header_image_url = "https://cdn.thenudge.com/wp-content/uploads/2022/09/skyline.png"
+header_image_url = "skyline_homepage.png"
 st.image(header_image_url)
-
+#https://cdn.thenudge.com/wp-content/uploads/2022/09/skyline.png
 st.title("The Career Compass")
 st.subheader("Creating your own CV has never been easier!")
 
