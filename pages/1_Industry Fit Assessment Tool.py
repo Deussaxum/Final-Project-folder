@@ -2,11 +2,10 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 import io
-import base64
 
 # Set Streamlit theme to a colorful and attractive style
 st.set_page_config(
-    page_title="Industry Fit Assessment Tool",
+    page_title="Career Fit Assessment Tool",
     page_icon="🌟",
     layout="wide",
 )
@@ -25,7 +24,7 @@ st.markdown(
 )
 
 # Function to create radar charts with customizable size and resolution
-def plot_radar_chart(categories, scores, title, figure_size=(2, 2), dpi=2000, title_fontsize=4, label_distance=0.5):
+def plot_radar_chart(categories, scores, title, figure_size=(1.5, 1.5), dpi=2000, title_fontsize=4, label_distance=0.5):
     N = len(categories)
     angles = [n / float(N) * 2 * np.pi for n in range(N)]
     scores += scores[:1]
@@ -58,7 +57,7 @@ def plot_radar_chart(categories, scores, title, figure_size=(2, 2), dpi=2000, ti
     img_data.seek(0)
 
     # Display the high-resolution image using st.image
-    st.image(img_data, width=1000)
+    st.image(img_data, width=800)
 
 # Function to create a bar chart with customizable size, resolution, and fontsize
 def plot_bar_chart(labels, values, title, figure_size=(8, 4), dpi=1500, label_fontsize=12, title_fontsize=14):
@@ -111,12 +110,10 @@ def calculate_big_five_scores(responses):
 def get_responses_from_sliders(sliders):
     return [slider for slider in sliders]
 
-header_image = "https://images.pexels.com/photos/277593/pexels-photo-277593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-
-
 # Main function
 def main():
-    st.image(header_image)
+    st.image('Deussaxum/Final-Project-folder/360_F_209798420_6ZbtGqBjmzQlaiEET1eDWJnBwPLBa8XW.jpg',
+             width=1200, use_column_width='true')  # This will display the image as a header
     st.title("Career Fit Assessment Tool\n Assessment of Industry Fit based on Big 5 Personality Traits, Skills, and Work-Life Balance")
 
     # Big Five Personality Questions
@@ -188,11 +185,12 @@ def main():
 
         # Define industry scores for skills and work-life balance
         industry_scores = {
-            "Investment Banking": ([70, 90, 75, 65, 30], [80, 90, 50, 85, 70], [45, 25, 65, 90, 55]),
-            "Corporate Job (General)": ([65, 80, 50, 90, 50], [65, 60, 50, 75, 55], [95, 90, 90, 95, 85]),
+            "Finance": ([70, 90, 75, 65, 30], [80, 90, 50, 85, 70], [45, 25, 65, 90, 55]),
+            "Corporate Job": ([65, 80, 50, 90, 50], [65, 60, 50, 75, 55], [95, 90, 90, 95, 85]),
             "Self-Employed (Entrepreneurship)": ([90, 95, 95, 70, 20], [95, 80, 90, 95, 85], [50, 40, 70, 60, 60]),
-            "Computer Science (Tech Industry)": ([50, 90, 55, 85, 30], [90, 90, 45, 75, 90], [70, 70, 75, 80, 70]),
+            "Tech Industry": ([50, 90, 55, 85, 30], [90, 90, 45, 75, 90], [70, 70, 75, 80, 70]),
             "Consulting": ([85, 90, 90, 90, 40], [95, 90, 40, 95, 85], [70, 55, 65, 60, 65]),
+            "Academic Career": ([90, 90, 95, 70, 30], [70, 80, 90, 95, 75], [75, 60, 60, 70, 75])
         }
 
         total_fit_percentages = calculate_total_fit(
@@ -204,12 +202,12 @@ def main():
             list(personality_scores.keys()), list(personality_scores.values()), "Your Big Five Personality Traits"
         )
         # Display Skills Profile
-        st.subheader("Skills Profile")
+       
         skills_profile_img = plot_bar_chart(skill_labels, skill_responses, "Skills Profile", label_fontsize=10, title_fontsize=12)
-        st.image(skills_profile_img, width=900)
+        st.image(skills_profile_img, width=700)
 
         # Display Work-Life Balance Profile
-        st.subheader("Work-Life Balance Profile")
+        
         average_work_life_balance = np.mean(work_life_balance_responses)
         st.write(f"Average Importance of Work-Life Balance: {average_work_life_balance:.2f} (out of 100)")
 
@@ -218,14 +216,16 @@ def main():
         importance_labels = ["Work-Life Balance"]
 
         # Use the modified plot_bar_chart function to get the image data
-        importance_img_data = plot_bar_chart(importance_labels, importance_values, "Importance of Work-Life Balance", figure_size=(5, 1), dpi=1200, label_fontsize=6, title_fontsize=8)
+        importance_img_data = plot_bar_chart(importance_labels, importance_values, "Importance of Work-Life Balance", figure_size=(7, 1), dpi=1500, label_fontsize=6, title_fontsize=8)
 
         # Display the high-resolution image using st.image
-        st.image(importance_img_data, width=900)
+        st.image(importance_img_data, width=700)
 
         # Display Radar Chart for Industry Fit
-        st.subheader("Industry Fit")
+       
         plot_radar_chart(list(industry_scores.keys()), list(total_fit_percentages.values()), "Industry Fit")
+       
+       
 
         for industry, fit in total_fit_percentages.items():
             st.write(f"Total Fit for {industry}: {fit:.2f}%")
@@ -235,4 +235,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
