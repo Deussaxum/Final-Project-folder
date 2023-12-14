@@ -1668,8 +1668,8 @@ with tabs[4]:
         locatione2 = st.text_input("Location 2", value=locatione2, key="unique_key_237")
         position2 = st.text_input("Position 2", value=position2, key="unique_key_238")
         timee2 = st.text_input("Time Frame 2", value=timee2, key="unique_key_239")
-        task21 = st.text_area("Tasks 1", key='task21_49', height=100)
-        task22 = st.text_area("Tasks 2", key='task22_50', height=100)
+        task21 = st.text_area("Tasks 1", key='task21_100', height=100)
+        task22 = st.text_area("Tasks 2", key='task22_100', height=100)
 
     # Extracurricular Activities / Engagement Section
     with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
