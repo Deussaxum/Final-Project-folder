@@ -698,9 +698,6 @@ with tabs[0]:
     # Streamlit app layout
     linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='linkedin_url_key')
 
-    if st.button('Retrieve LinkedIn Data', key='retrieve_data_button'):
-            st.session_state['linkedin_data'] = retrieve_info(linkedin_profile_url) or {}
-
     # Personal Information Section
     st.header('Your CV, Your Story: Complete the Chapters')
     with st.expander("Personal Information", expanded=False):
