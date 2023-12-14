@@ -181,7 +181,7 @@ with tabs[0]:
 
     # Education Section
     # Assuming the first two education entries in LinkedIn data (if they exist) are to be used
-    education_entries = linkedin_data.get('education', [{} for _ in range(2)])
+    education_entries = st.session_state['linkedin_data'].get('education', [{} for _ in range(2)])
 
     def format_date(date_dict):
         """Formats a date dictionary into DD.MM.YYYY format."""
@@ -209,7 +209,7 @@ with tabs[0]:
     ends_at2 = format_date(education_entries[1].get('ends_at')) if len(education_entries) > 1 else ''
     timeus2 = f"{starts_at2} - {ends_at2}" if ends_at2 else starts_at2
 
-    with st.expander("Education", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Education", expanded=False):
         university1 = st.text_input("University/School 1", value=university1, key="unique_key_5")
         locationus1 = st.text_input("Location 1", value=locationus1, key="unique_key_6")
         majorus1 = st.text_input("Study Program 1", value=majorus1, key="unique_key_7")
