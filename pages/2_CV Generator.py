@@ -782,7 +782,7 @@ with tabs[0]:
             return f"{day:02d}.{month:02d}.{year}" if year else ''
         return ''
 
-        # Retrieve experience entries from session state or initialize with defaults
+    # Retrieve first three experience information from session_state
     experience_entries = st.session_state['linkedin_data'].get('experiences', [{} for _ in range(3)])
 
     # If there are experience entries from LinkedIn, use them as default values, otherwise use empty strings
@@ -792,7 +792,8 @@ with tabs[0]:
     starts_at1 = format_date(experience_entries[0].get('starts_at')) if experience_entries else ''
     ends_at1 = format_date(experience_entries[0].get('ends_at')) if experience_entries else ''
     timee1 = f"{starts_at1} - {ends_at1}" if ends_at1 else starts_at1
-
+    
+    # If there are experience entries from LinkedIn, use them as default values, otherwise use empty strings
     experience2 = experience_entries[1].get('company', '') if len(experience_entries) > 1 else ''
     locatione2 = experience_entries[1].get('location', '') if len(experience_entries) > 1 else ''
     position2 = experience_entries[1].get('title', '') if len(experience_entries) > 1 else ''
@@ -800,6 +801,7 @@ with tabs[0]:
     ends_at2 = format_date(experience_entries[1].get('ends_at')) if len(experience_entries) > 1 else ''
     timee2 = f"{starts_at2} - {ends_at2}" if ends_at2 else starts_at2
 
+    # If there are experience entries from LinkedIn, use them as default values, otherwise use empty strings
     experience3 = experience_entries[2].get('company', '') if len(experience_entries) > 2 else ''
     locatione3 = experience_entries[2].get('location', '') if len(experience_entries) > 2 else ''
     position3 = experience_entries[2].get('title', '') if len(experience_entries) > 2 else ''
@@ -807,6 +809,7 @@ with tabs[0]:
     ends_at3 = format_date(experience_entries[2].get('ends_at')) if len(experience_entries) > 2 else ''
     timee3 = f"{starts_at3} - {ends_at3}" if ends_at3 else starts_at3
 
+    # Empty or pre-filled input fields
     with st.expander("Professional Experience", expanded=False):
         experience1 = st.text_input("Company 1", value=experience1, key="unique_key_131")
         locatione1 = st.text_input("Location 1", value=locatione1, key="unique_key_132")
@@ -816,6 +819,7 @@ with tabs[0]:
         task12 = st.text_area("Tasks 2", key='task22_20', height=100)
         task13 = st.text_area("Tasks 3", key='task23_21', height=100)
 
+        # Empty or pre-filled input fields
         experience2 = st.text_input("Company 2", value=experience2, key="unique_key_135")
         locatione2 = st.text_input("Location 2", value=locatione2, key="unique_key_136")
         position2 = st.text_input("Position 2", value=position2, key="unique_key_137")
@@ -824,6 +828,7 @@ with tabs[0]:
         task22 = st.text_area("Tasks 2", key='task22_23', height=100)
         task23 = st.text_area("Tasks 3", key='task23_24', height=100)
 
+        # Empty or pre-filled input fields
         experience3 = st.text_input("Company 3", value=experience3, key="unique_key_139")
         locatione3 = st.text_input("Location 3", value=locatione3, key="unique_key_140")
         position3 = st.text_input("Position 3", value=position3, key="unique_key_141")
@@ -833,39 +838,49 @@ with tabs[0]:
         task33 = st.text_area("Tasks 3", key='task33_27', height=100)
 
     # Extracurricular Activities / Engagement Section
+    # Same logic as before. Retrieving data from session state (if available)
     with st.expander("Extracurricular Activities", expanded=False):
         volunteer_work_entries = st.session_state['linkedin_data'].get('volunteer_work', [])
         certifications_entries = st.session_state['linkedin_data'].get('certifications', [])
         languages_entries = st.session_state['linkedin_data'].get('languages', [''])
         interests_entries = st.session_state['linkedin_data'].get('interests', [''])
 
+        # Retrieving only the titles / names of the volunteering activities / certificates
         volunteer_work_titles = [entry.get('title', '') for entry in volunteer_work_entries]
         certifications_titles = [entry.get('name', '') for entry in certifications_entries]
 
+        # Merging the titles / names
         volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
         certifications_combined = ', '.join(certifications_titles[0:3])
 
+        # Input fields pre-filled or empty
         extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_1_key")
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_1_key")
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_1_key")
 
     # Skills & Interest Section
-    # Wrap the Skills & Interest section in an expander
     with st.expander("Skills & Interest", expanded=False):
+        
+        # Retrieving information regarding computer skills
         computer_skills_entries = st.session_state['linkedin_data'].get('computer_skills', [''])
 
+        # Merging the entries so that they are shown with a comma in between each value in the input field
         languages_combined = ', '.join(languages_entries[0:3])
         interests_combined = ', '.join(interests_entries[0:3])
         computer_skills_combined = ', '.join(computer_skills_entries[0:3])
 
+        # Input fields languages, computer skills & interests (pre-filled if available)
         languages1 = st.text_input("Languages", value=languages_combined, key="languages_1_key")
         computer1 = st.text_input("Computer Skills", value=computer_skills_combined, key="computer_skills_key")
         interests1 = st.text_input("Interests", value=interests_combined, key="interests_1_key")
 
+    # Button that initiates the generation of the LaTeX code in accordance with the structure provided at the beginning of this code file
+    # All variables (e.g. name, address) that have been defined in this tab (through pre-filling or by the user) are taken and inserted at the respective places in the LaTeX code
     if st.button("Generate LaTeX", key='generate_latex_button_tab1'):
         latex_code = build_latex_code(name, address, phone, email, university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1, university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2, experience1, locatione1, position1, timee1, task11, task12, task13, experience2, locatione2, position2, timee2, task21, task22, task23, experience3, locatione3, position3, timee3, task31, task32, task33, extracurricular1, additionaleducation1, certificates1, languages1, computer1, interests1)
         st.text_area("Generated LaTeX Code:", latex_code, height=300, key="z")
         
+        # Tutorial: How to use the LaTeX output in overleaf to receive the final CV
         st.markdown("### How to Create a Pdf with this LaTeX Code")
         st.markdown("""
         - Copy the entire LaTeX code above.
