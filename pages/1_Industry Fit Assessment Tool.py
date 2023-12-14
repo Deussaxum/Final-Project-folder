@@ -246,3 +246,8 @@ def main():
         # Call the main function when the script is executed
 if __name__ == "__main__":
      main()
+
+#sources of inspiration for creating graphs in streamlit using python: 
+#module 10 of lecture 
+#Video Series about creating graphs in streamlit (https://www.youtube.com/watch?v=cUKqsnLGQBw)
+#picture created using generative AI (Chat GPT-4.0)
