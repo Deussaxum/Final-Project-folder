@@ -105,6 +105,10 @@ def build_latex_code(name, address, phone, email, university1, locationus1, majo
    """
    return latex_code
 
+# Initialize session state for LinkedIn data
+if 'linkedin_data' not in st.session_state:
+    st.session_state['linkedin_data'] = {}
+
 st.title("CV Generator 📃")
 
 tab_titles = [
