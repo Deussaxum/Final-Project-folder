@@ -1172,7 +1172,7 @@ with tabs[2]:
         locatione1 = st.text_input("Location 1 (City, Country)", value=locatione1, key="unique_key_185")
         position1 = st.text_input("Position 1", value=position1, key="unique_key_186")
         timee1 = st.text_input("Time Frame 1 (DD.MM.YYYY - DD.MM.YYYY)", value=timee1, key="unique_key_187")
-        task11 = st.text_area("Tasks 1", key='task11_37', height=100)
+        task11 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task11_37', height=100)
         task12 = st.text_area("Tasks 2", key='task12_38', height=100)
         task13 = st.text_area("Tasks 3", key='task13_39', height=100)
 
@@ -1180,7 +1180,7 @@ with tabs[2]:
         locatione2 = st.text_input("Location 2 (City, Country)", value=locatione2, key="unique_key_189")
         position2 = st.text_input("Position 2", value=position2, key="unique_key_190")
         timee2 = st.text_input("Time Frame 2 (DD.MM.YYYY - DD.MM.YYYY)", value=timee2, key="unique_key_191")
-        task21 = st.text_area("Tasks 1", key='task21_40', height=100)
+        task21 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task21_40', height=100)
         task22 = st.text_area("Tasks 2", key='task22_41', height=100)
         task23 = st.text_area("Tasks 3", key='task23_42', height=100)
 
@@ -1188,7 +1188,7 @@ with tabs[2]:
         locatione3 = st.text_input("Location 3 (City, Country)", value=locatione3, key="unique_key_193")
         position3 = st.text_input("Position 3", value=position3, key="unique_key_194")
         timee3 = st.text_input("Time Frame 3 (DD.MM.YYYY - DD.MM.YYYY)", value=timee3, key="unique_key_195")
-        task31 = st.text_area("Tasks 1", key='task31_43', height=100)
+        task31 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task31_43', height=100)
         task32 = st.text_area("Tasks 2", key='task32_44', height=100)
         task33 = st.text_area("Tasks 3", key='task33_45', height=100)
 
