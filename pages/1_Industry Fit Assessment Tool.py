@@ -6,7 +6,7 @@ import io  # IO module for handling in-memory file-like objects
 
 # Setting up the Streamlit page with a specific title and layout
 st.set_page_config(
-    page_title="Career Fit Assessment Tool",  # Title of the web page
+    page_title="Industry Fit Assessment Tool",  # Title of the web page
     layout="wide",  # Layout of the page. 'wide' utilizes more screen space.
 )
 
