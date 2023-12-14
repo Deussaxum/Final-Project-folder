@@ -5,7 +5,7 @@ import requests
 logo_url = 'https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png'
 
 # Define the API key and headers
-api_key = 'OQfhKnmj2k9bUHmlHH9Qbg'
+api_key = 'EIqMpWEbOnJLoQvNFz1CQ'
 headers = {'Authorization': 'Bearer ' + api_key}
 api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin/company/job'
 
