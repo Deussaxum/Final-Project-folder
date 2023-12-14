@@ -1,17 +1,19 @@
 import streamlit as st
 
-
+# Set the configuration for the Streamlit page, including the page title
 st.set_page_config(
     page_title="Career Compass 🧭",
 )
 
-
+# Define the URL for the header image and display it on the page
 header_image_url = "CareerCompassHeader.jpeg"
 st.image(header_image_url)
 
+# Add a main title and a subheader to the page
 st.title("The Career Compass")
 st.subheader("Creating your own CV has never been easier!")
 
+# Display an informational section with a detailed description
 st.info("""
     Struggling with frequent rejections despite possessing valuable experience and skills? Look no further – the Career Compass CV Generator is here to solve this challenge by crafting a tailored CV that accurately showcases your capabilities. In just under 10 minutes, our user-friendly platform, enhanced by the LinkedIn API, will generate the perfect CV for you.
 
@@ -20,12 +22,14 @@ st.info("""
     Don't let rejection letters deter you – let the Career Compass CV Generator and the Industry Fit Assessment be your allies in navigating the competitive job market. Take control of your career journey with confidence and precision.
 """)
 
+# Add another subheader and provide step-by-step instructions on how to use the service
 st.subheader("HOW IT WORKS")
 st.info("1. Determine which industry suits you best by taking our test based on the Industry Fit Assessment.")
 st.info("2. Choose the industry you want your CV to be tailored to by going to the CV Generator and choosing the industry.")
 st.info("3. If you already know which industry to apply for, you can directly go to the CV Generator and choose the corresponding industry.")
 st.info("4. In case you are having a LinkedIn account, use our LinkedIn tool to retrieve your profile information to accelerate the generation of your CV.")
 
+# Explain the purpose and functionality of the Industry Fit Assessment
 st.subheader("What is the Industry Fit Assessment?")
 
 st.info("""
@@ -36,6 +40,7 @@ st.info("""
     The results are presented in a visually accessible format, utilizing diagrams to illustrate your skills and personality traits. Here you can see some examples for such diagrams: 
 """)
 
+# Define URLs for various diagram images and display them in a two-column layout
 diagramm_image_url1 = "Example_Diagramm1.png"
 diagramm_image_url2 = "Example_Diagramm2.jpg"
 diagramm_image_url3 = "Example_Diagramm3.png"
@@ -68,6 +73,7 @@ with col2:
 st.subheader("Industry Overview")
 #defintion of the file paths for the pictures below    
   
+# Define the file paths for the pictures in the industry overview section
 header_image_url1 = "Consulting.Picture.jpeg"
 header_image_url2 = "Finance.Picture.jpeg"
 header_image_url3 = "Corporate.Picture.jpeg"
@@ -76,9 +82,10 @@ header_image_url5 = "Academic.Picture.jpeg"
 header_image_url6 = "Startup.Picture.jpeg"
 header_image_url7 = "Law.Picture.jpeg"
 
-#creation of the two columns for the different boxes
+# Create two columns for the industry overview boxes
 col1, col2 = st.columns(2)
 
+# Define content for each box, including subheaders, images, and descriptions
 # Box 1
 with col1:
     st.subheader("Consulting 🛫")
@@ -121,4 +128,5 @@ with col1:
     st.image(header_image_url7)
     st.write("As a lawyer, you will undertake a diverse range of tasks and responsibilities, with a primary focus on defending your clients. Various specialized areas within the legal field offer opportunities for practice, and one illustrative example is tax law.")
 
+# Display a message in the sidebar
 st.sidebar.success("Please select a page Above.")
