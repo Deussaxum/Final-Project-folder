@@ -697,40 +697,6 @@ tabs=st.tabs(tab_titles)
 
 with tabs[0]:
 
-    # Function to extract information from API response
-    def extract_info(jsondata):
-        # Initialize default values for all fields
-        extracted_info = {
-            'full_name': jsondata.get('full_name', ''),
-            'city': jsondata.get('city', ''),
-            'state': jsondata.get('state', ''),
-            'country': jsondata.get('country', ''),
-            'education': jsondata.get('education', []),
-            'experiences': jsondata.get('experiences', []),
-            'volunteer_work': jsondata.get('volunteer_work', []),
-            'certifications': jsondata.get('certifications', []),
-            'languages': jsondata.get('languages', []),
-            'interests': jsondata.get('interests', [])
-        }
-        return extracted_info
-
-    # Function to retrieve information
-    def retrieve_info(linkedin_profile_url):
-        api_key = 'OQfhKnmj2k9bUHmlHH9Qbg'
-        headers = {'Authorization': 'Bearer ' + api_key}
-        api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
-        params = {'linkedin_profile_url': linkedin_profile_url}
-        response = requests.get(api_endpoint, params=params, headers=headers)
-        if response.status_code == 200:
-            data = response.json()
-            return extract_info(data)
-        else:
-            st.error(f"Failed to retrieve profile information: HTTP {response.status_code}")
-            return {}
-
-    # Initialize linkedin_data as an empty dictionary to avoid NameError
-    linkedin_data = {}
-
     # Personal Information Section
     st.header('Your CV, Your Story: Complete the Chapters')
     with st.expander("Personal Information", expanded=False):
