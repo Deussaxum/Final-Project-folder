@@ -898,12 +898,6 @@ with tabs[1]:
     # Initialize linkedin_data as an empty dictionary to avoid NameError
     linkedin_data = {}
 
-    # Streamlit app layout
-    linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='linkedin_url_key_2')
-
-    if st.button('Retrieve LinkedIn Data', key='retrieve_data_button_2'):
-        linkedin_data = retrieve_info(linkedin_profile_url) or {}
-
     # Personal Information Section
     st.header("Your CV, Your Story: Complete the Chapters")
 
