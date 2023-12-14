@@ -285,23 +285,20 @@ with tabs[0]:
         task33 = st.text_area("Tasks 3", key='task33_27', height=100)
 
     # Extracurricular Activities / Engagement Section
-    with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
-        # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
-        volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
-        certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
-        languages_entries = linkedin_data.get('languages', [''])  # Assuming it's a list of titles
-        interests_entries = linkedin_data.get('interests', [''])  # Assuming it's a list of titles
+    with st.expander("Extracurricular Activities", expanded=False):
+        volunteer_work_entries = st.session_state['linkedin_data'].get('volunteer_work', [])
+        certifications_entries = st.session_state['linkedin_data'].get('certifications', [])
+        languages_entries = st.session_state['linkedin_data'].get('languages', [''])
+        interests_entries = st.session_state['linkedin_data'].get('interests', [''])
 
-        # Extract titles from volunteer work and certifications
         volunteer_work_titles = [entry.get('title', '') for entry in volunteer_work_entries]
         certifications_titles = [entry.get('name', '') for entry in certifications_entries]
 
-        # Combine the first three titles with a comma
         volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
         certifications_combined = ', '.join(certifications_titles[0:3])
 
         extracurricular1 = st.text_input("Extracurricular Activities", value=volunteer_work_combined, key="extracurricular_1_key")
-        additionaleducation1 = st.text_input("Additional Education", key="additional_education_1_key")  # No specific API data, so left for manual input
+        additionaleducation1 = st.text_input("Additional Education", key="additional_education_1_key")
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_1_key")
 
     # Skills & Interest Section
