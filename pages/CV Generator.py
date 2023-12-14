@@ -1716,16 +1716,16 @@ with tabs[5]:
 
     # Projects Section
     with st.expander("Projects", expanded=False):  # 'expanded=True' means the section will be expanded by default
-        projectname1 = st.text_input("Project Name 1", key="project_5")
+        projectname1 = st.text_input("Publication 1", key="project_5")
         elocation1 = st.text_input("Location 1", key="project_language_5")
-        ereason1 = st.text_input("Reason 1", key="project_function_5")
+        ereason1 = st.text_input("Description 1", key="project_function_5")
         timeen1 = st.text_input("Time Frame 1", key="project_time_5")
         taske11 = st.text_area("Tasks 1", key="project_task_61", height=100)
         taske12 = st.text_area("Tasks 2", key='project_task_62', height=100)
 
-        projectname2 = st.text_input("Project Name 2", key="project_6")
+        projectname2 = st.text_input("Publication 2", key="project_6")
         elocation2 = st.text_input("Location 2", key="project_language_6")
-        ereason2 = st.text_input("Reason 2", key="project_function_6")
+        ereason2 = st.text_input("Description 2", key="project_function_6")
         timeen2 = st.text_input("Time Frame 2", key="project_time_6")
         taske21 = st.text_area("Tasks 1", key="project_task_71", height=100)
         taske22 = st.text_area("Tasks 2", key='project_task_72', height=100)
