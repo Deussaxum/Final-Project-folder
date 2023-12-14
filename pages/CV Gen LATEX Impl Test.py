@@ -551,7 +551,7 @@ with tabs[1]:
         return ''
 
     # Retrieve up to three experience entries from LinkedIn data if they exist
-    experience_entries = linkedin_data.get('experiences', [{} for _ in range(3)])
+    experience_entries = st.session_state['linkedin_data'].get('experiences', [{} for _ in range(3)])
 
     # If there are experience entries from LinkedIn, use them as default values, otherwise use empty strings
     experience1 = experience_entries[0].get('company', '') if experience_entries else ''
@@ -603,10 +603,10 @@ with tabs[1]:
     # Extracurricular Activities / Engagement Section
     with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
-        volunteer_work_entries = linkedin_data.get('volunteer_work', [])  # Assuming it's a list of dictionaries
-        certifications_entries = linkedin_data.get('certifications', [])  # Assuming it's a list of dictionaries
-        languages_entries = linkedin_data.get('languages', [''])  # Assuming it's a list of titles
-        interests_entries = linkedin_data.get('interests', [''])  # Assuming it's a list of titles
+        volunteer_work_entries = st.session_state['linkedin_data'].get('volunteer_work', [])
+        certifications_entries = st.session_state['linkedin_data'].get('certifications', [])
+        languages_entries = st.session_state['linkedin_data'].get('languages', [''])
+        interests_entries = st.session_state['linkedin_data'].get('interests', [''])
 
         # Extract titles from volunteer work and certifications
         volunteer_work_titles = [entry.get('title', '') for entry in volunteer_work_entries]
