@@ -1501,9 +1501,9 @@ with tabs[4]:
 
     with st.expander("Professional Experience", expanded=False):  # 'expanded=True' means the section will be expanded by default
         experience1 = st.text_input("Company 1", value=experience1, key="unique_key_232")
-        locatione1 = st.text_input("Location 1", value=locatione1, key="unique_key_233")
+        locatione1 = st.text_input("Location 1 (City, Country)", value=locatione1, key="unique_key_233")
         position1 = st.text_input("Position 1", value=position1, key="unique_key_234")
-        timee1 = st.text_input("Time Frame 1", value=timee1, key="unique_key_235")
+        timee1 = st.text_input("Time Frame 1 (DD.MM.YYYY)", value=timee1, key="unique_key_235")
         task11 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task11_100', height=100)
         task12 = st.text_area("Tasks 2", key='task12_100', height=100)
 
