@@ -79,7 +79,7 @@ header_image_url3 = "Corporate.Picture.jpeg"
 header_image_url4 = "IT.Picture.jpeg"
 header_image_url5 = "Academic.Picture.jpeg"
 header_image_url6 = "Startup.Picture.jpeg"
-header_image_url7 = "Law.Picture.jpeg"
+
 
 # Create two columns for displaying industry information in the industry boxes
 col1, col2 = st.columns(2)  
