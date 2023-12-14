@@ -757,17 +757,17 @@ with tabs[0]:
     # Creation of the Input fields. If entries from Linkedin Proxycurl API are available, pre-fill the input fields. If not, leave blank.
     with st.expander("Education", expanded=False):
         university1 = st.text_input("University/School 1", value=university1, key="unique_key_5")
-        locationus1 = st.text_input("Location 1", value=locationus1, key="unique_key_6")
+        locationus1 = st.text_input("Location 1 (City, Country)", value=locationus1, key="unique_key_6")
         majorus1 = st.text_input("Study Program 1", value=majorus1, key="unique_key_7")
-        timeus1 = st.text_input("Time Frame 1", value=timeus1, key="unique_key_8")
+        timeus1 = st.text_input("Time Frame 1 (DD.MM.YYYY - DD.MM.YYYY)", value=timeus1, key="unique_key_8")
         courses1 = st.text_input("Courses 1", key="unique_key_9")
         gpa1 = st.text_input("GPA 1", value=gpa1, key="unique_key_10")
         clubs1 = st.text_input("Clubs/Activities 1", key="unique_key_11")
 
         university2 = st.text_input("University/School 2", value=university2, key="unique_key_12")
-        locationus2 = st.text_input("Location 2", value=locationus2, key="unique_key_13")
+        locationus2 = st.text_input("Location 2 (City, Country)", value=locationus2, key="unique_key_13")
         majorus2 = st.text_input("Study Program 2", value=majorus2, key="unique_key_14")
-        timeus2 = st.text_input("Time Frame 2", value=timeus2, key="unique_key_15")
+        timeus2 = st.text_input("Time Frame 2 (DD.MM.YYYY - DD.MM.YYYY)", value=timeus2, key="unique_key_15")
         courses2 = st.text_input("Courses 2", key="unique_key_16")
         gpa2 = st.text_input("GPA 2", value=gpa2, key="unique_key_17")
         clubs2 = st.text_input("Clubs/Activities 2", key="unique_key_18")
@@ -812,28 +812,28 @@ with tabs[0]:
     # Empty or pre-filled input fields
     with st.expander("Professional Experience", expanded=False):
         experience1 = st.text_input("Company 1", value=experience1, key="unique_key_131")
-        locatione1 = st.text_input("Location 1", value=locatione1, key="unique_key_132")
+        locatione1 = st.text_input("Location 1 (City, Country)", value=locatione1, key="unique_key_132")
         position1 = st.text_input("Position 1", value=position1, key="unique_key_133")
-        timee1 = st.text_input("Time Frame 1", value=timee1, key="unique_key_134")
-        task11 = st.text_area("Tasks 1", key='task11_19', height=100)
+        timee1 = st.text_input("Time Frame 1 (DD.MM.YYYY - DD.MM.YYYY)", value=timee1, key="unique_key_134")
+        task11 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task11_19', height=100)
         task12 = st.text_area("Tasks 2", key='task22_20', height=100)
         task13 = st.text_area("Tasks 3", key='task23_21', height=100)
 
         # Empty or pre-filled input fields
         experience2 = st.text_input("Company 2", value=experience2, key="unique_key_135")
-        locatione2 = st.text_input("Location 2", value=locatione2, key="unique_key_136")
+        locatione2 = st.text_input("Location 2 (City, Country)", value=locatione2, key="unique_key_136")
         position2 = st.text_input("Position 2", value=position2, key="unique_key_137")
-        timee2 = st.text_input("Time Frame 2", value=timee2, key="unique_key_138")
-        task21 = st.text_area("Tasks 1", key='task21_22', height=100)
+        timee2 = st.text_input("Time Frame 2 (DD.MM.YYYY - DD.MM.YYYY)", value=timee2, key="unique_key_138")
+        task21 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task21_22', height=100)
         task22 = st.text_area("Tasks 2", key='task22_23', height=100)
         task23 = st.text_area("Tasks 3", key='task23_24', height=100)
 
         # Empty or pre-filled input fields
         experience3 = st.text_input("Company 3", value=experience3, key="unique_key_139")
-        locatione3 = st.text_input("Location 3", value=locatione3, key="unique_key_140")
+        locatione3 = st.text_input("Location 3 (City, Country)", value=locatione3, key="unique_key_140")
         position3 = st.text_input("Position 3", value=position3, key="unique_key_141")
-        timee3 = st.text_input("Time Frame 3", value=timee3, key="unique_key_142")
-        task31 = st.text_area("Tasks 1", key='task31_25', height=100)
+        timee3 = st.text_input("Time Frame 3 (DD.MM.YYYY - DD.MM.YYYY)", value=timee3, key="unique_key_142")
+        task31 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task31_25', height=100)
         task32 = st.text_area("Tasks 2", key='task32_26', height=100)
         task33 = st.text_area("Tasks 3", key='task33_27', height=100)
 
@@ -856,7 +856,7 @@ with tabs[0]:
         # Input fields pre-filled or empty
         extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_1_key")
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_1_key")
-        certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_1_key")
+        certificates1 = st.text_input("Certificates and Awards (e.g. Scholarships)", value=certifications_combined, key="certificates_1_key")
 
     # Skills & Interest Section
     with st.expander("Skills & Interest", expanded=False):
