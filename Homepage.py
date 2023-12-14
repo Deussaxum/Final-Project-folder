@@ -1,6 +1,8 @@
 import streamlit as st 
 
-# Set the configuration for the Streamlit page, including the page title
+# Set the configuration for the Streamlit page, including the page title. 
+# Source for streamlit functions: https://docs.streamlit.io/library/api-reference/text/st.title
+# Source for pictures: DALL·E 3
 st.set_page_config(
     page_title="Career Compass 🧭",
 )
