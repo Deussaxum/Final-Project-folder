@@ -2,9 +2,10 @@
 import streamlit as st  
 
 # Set page configuration, including the page title displayed in the browser tab
+# Source: https://www.youtube.com/watch?v=YClmpnpszq8
 st.set_page_config(
     page_title="Career Compass 🧭",  
-)
+) 
 
 # Variable assignment: Define the file path for the header image
 header_image_url = "CareerCompassHeader.jpeg"
@@ -132,4 +133,5 @@ with col1: #In column 1 row 4
     #Display text related to Law
 
 # Display a message in the sidebar
+# Source: https://www.youtube.com/watch?v=YClmpnpszq8
 st.sidebar.success("Please select a page Above.")
