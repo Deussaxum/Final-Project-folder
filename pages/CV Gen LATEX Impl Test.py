@@ -162,26 +162,22 @@ with tabs[0]:
     linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='linkedin_url_key')
 
     if st.button('Retrieve LinkedIn Data', key='retrieve_data_button'):
-        linkedin_data = retrieve_info(linkedin_profile_url) or {}
+            st.session_state['linkedin_data'] = retrieve_info(linkedin_profile_url) or {}
 
     # Personal Information Section
     st.header('Your CV, Your Story: Complete the Chapters')
-    with st.expander("Personal Information", expanded=False):  # 'expanded=True' means the section will be expanded by default
-        # Retrieve individual address components, defaulting to an empty string if not found
-        city = linkedin_data.get('city', '')
-        state = linkedin_data.get('state', '')
-        country = linkedin_data.get('country', '')
+    with st.expander("Personal Information", expanded=False):
+        city = st.session_state['linkedin_data'].get('city', '')
+        state = st.session_state['linkedin_data'].get('state', '')
+        country = st.session_state['linkedin_data'].get('country', '')
 
-        # Construct the address string, only including components that are present
-        address_components = [comp for comp in [city, state, country] if comp]  # List comprehension to filter out empty components
-        formatted_address = ', '.join(address_components)  # Join the components with a comma only if they are present
+        address_components = [comp for comp in [city, state, country] if comp]
+        formatted_address = ', '.join(address_components)
 
-        # Streamlit text input fields
-        name = st.text_input("Name", value=linkedin_data.get('full_name', ''), key='name_key')
+        name = st.text_input("Name", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key')
         address = st.text_input("Address", value=formatted_address, key='address_key')
         phone = st.text_input("Phone Number", key='phone_key')
         email = st.text_input("E-Mail", key='email_key')
-
 
     # Education Section
     # Assuming the first two education entries in LinkedIn data (if they exist) are to be used
