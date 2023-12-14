@@ -2,20 +2,38 @@ import streamlit as st
 import requests
 import subprocess
 
-def build_latex_code(name, address, phone, email, 
-                     university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1, 
-                     university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2, 
-                     experience1, locatione1, position1, timee1, task11, task12, task13, 
-                     experience2, locatione2, position2, timee2, task21, task22, task23, 
-                     experience3, locatione3, position3, timee3, task31, task32, task33, 
-                     extracurricular1, additionaleducation1, certificates1, languages1, computer1, interests1):
-
-    # LaTeX document header
+def build_latex_code(name, address, phone, email, university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1, university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2, experience1, locatione1, position1, timee1, task11, task12, task13, experience2, locatione2, position2, timee2, task21, task22, task23, experience3, locatione3, position3, timee3, task31, task32, task33, extracurricular1, additionaleducation1, certificates1, languages1, computer1, interests1):
     latex_code = fr"""
     % Hier kommt Ihr LaTeX-Code
     \documentclass[a4paper,8pt]{{article}}
-    ... (other LaTeX setup code)
-
+    \usepackage{{parskip}}
+    \usepackage{{hologo}}
+    \usepackage{{fontspec}}
+    \RequirePackage{{color}}
+    \RequirePackage{{graphicx}}
+    \usepackage[usenames,dvipsnames]{{xcolor}}
+    \usepackage[scale=0.9, top=.4in, bottom=.4in]{{geometry}}
+    \usepackage{{enumitem}}
+    \usepackage{{tabularx}}
+    \usepackage{{enumitem}}
+    \newcolumntype{{C}}{{>{{\centering\arraybackslash}}X}}
+    \usepackage{{supertabular}}
+    \usepackage{{tabularx}}
+    \newlength{{\fullcollw}}
+    \setlength{{\fullcollw}}{{0.42\textwidth}}
+    \usepackage{{titlesec}}             
+    \usepackage{{multicol}}
+    \usepackage{{multirow}}
+    \titleformat{{\section}}{{\Large\scshape\raggedright}}{{}}{{0em}}{{}}[\titlerule]
+    \titlespacing{{\section}}{{0pt}}{{2pt}}{{2pt}}
+    \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{{biblatex}}
+    \usepackage[unicode, draft=false]{{hyperref}}
+    \color[HTML]{{110223}}
+    \addbibresource{{citations.bib}}
+    \setlength\bibitemsep{{1em}}
+    \usepackage{{fontawesome5}}
+    \usepackage[normalem]{{ulem}}
+    \setmainfont{{Arial}}
     \begin{{document}}
     \pagestyle{{empty}}
     \begin{{tabularx}}{{\linewidth}}{{@{{}} C @{{}}}}
@@ -24,81 +42,59 @@ def build_latex_code(name, address, phone, email,
     \textcolor[HTML]{{1C033C}} Mobile: {phone} \\
     \textcolor[HTML]{{1C033C}} Email: {email}
     \end{{tabularx}}
-
     \section{{EDUCATION}}
-    """
-
-    # Education Section
-    if any([university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1]):
-        latex_code += fr"""
-        \textbf{{{university1}}} \hfill \textbf{{{locationus1}}} \\[-3ex]
-        \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
-            \item {majorus1} \hfill \color[HTML]{{1C033C}} {timeus1}
-            \item Courses: {courses1}
-            \item GPA: {gpa1}
-            \item {clubs1}
-        \end{{itemize}}
-        """
-
-    if any([university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2]):
-        latex_code += fr"""
-        \textbf{{{university2}}} \hfill \textbf{{{locationus2}}} \\[-3ex]
-        \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
-            \item {majorus2} \hfill \color[HTML]{{1C033C}} {timeus2}
-            \item Courses: {courses2}
-            \item GPA: {gpa2}
-            \item {clubs2}
-        \end{{itemize}}
-        """
-
-    # Professional Experience Section
-    latex_code += "\\section{{PROFESSIONAL EXPERIENCE}}\n"
-
-    if any([experience1, locatione1, position1, timee1, task11, task12, task13]):
-        latex_code += fr"""
-        \textbf{{{experience1}}} \hfill \textbf{{{locatione1}}} \\[-3ex]
-        \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
-            \item \textit{{{position1}}} \hfill \color[HTML]{{1C033C}} {timee1}
-            \item {task11}
-            \item {task12}
-            \item {task13}
-        \end{{itemize}}
-        """
-
-    if any([experience2, locatione2, position2, timee2, task21, task22, task23]):
-        latex_code += fr"""
-        \textbf{{{experience2}}} \hfill \textbf{{{locatione2}}} \\[-3ex]
-        \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
-            \item \textit{{{position2}}} \hfill \color[HTML]{{1C033C}} {timee2}
-            \item {task21}
-            \item {task22}
-            \item {task23}
-        \end{{itemize}}
-        """
-
-    if any([experience3, locatione3, position3, timee3, task31, task32, task33]):
-        latex_code += fr"""
-        \textbf{{{experience3}}} \hfill \textbf{{{locatione3}}} \\[-3ex]
-        \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
-            \item \textit{{{position3}}} \hfill \color[HTML]{{1C033C}} {timee3}
-            \item {task31}
-            \item {task32}
-            \item {task33}
-        \end{{itemize}}
-        """
-    # Extracurricular Activities / Engagement Section
-    if any([extracurricular1, additionaleducation1, certificates1]):
-        latex_code += fr"""
-        \section{{EXTRACURRICULAR ACTIVITIES / ENGAGEMENT}}
-        \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
-            \item Extracurricular: {extracurricular1}
-            \item Additional Education: {additionaleducation1}
-            \item Certificate & Achievements: {certificates1}
-        \end{{itemize}}
-        """
-
-    # Skills & Interest Section
-    latex_code += fr"""
+    \textbf{{{university1}}} \hfill \textbf{{{locationus1}}} \\[-3ex]
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item {majorus1} \hfill \color[HTML]{{1C033C}} {timeus1}
+    \end{{itemize}}
+    \begin{{itemize}}[label=$\circ$,itemsep=0.5ex,parsep=0.5ex]
+        \item Courses: {courses1}
+        \item GPA: {gpa1}
+        \item {clubs1}
+    \end{{itemize}}
+    \textbf{{{university2}}} \hfill \textbf{{{locationus2}}} \\[-3ex]
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item {majorus2} \hfill \color[HTML]{{1C033C}} {timeus2}
+    \end{{itemize}}
+    \begin{{itemize}}[label=$\circ$,itemsep=0.5ex,parsep=0.5ex]
+        \item Courses: {courses2}
+        \item GPA: {gpa2}
+        \item {clubs2}
+    \end{{itemize}}
+    \section{{PROFESSIONAL EXPERIENCE}}
+    \textbf{{{experience1}}} \hfill \textbf{{{locatione1}}} \\[-3ex]
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item \textit{{{position1}}} \hfill \color[HTML]{{1C033C}} {timee1}
+    \end{{itemize}}
+    \begin{{itemize}}[label=$\circ$,itemsep=0.5ex,parsep=0.5ex]
+        \item {task11}
+        \item {task12}
+        \item {task13}
+    \end{{itemize}}
+    \textbf{{{experience2}}} \hfill \textbf{{{locatione2}}} \\[-3ex]
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item \textit{{{position2}}} \hfill \color[HTML]{{1C033C}} {timee2}
+    \end{{itemize}}
+    \begin{{itemize}}[label=$\circ$,itemsep=0.5ex,parsep=0.5ex]
+        \item {task21}
+        \item {task22}
+        \item {task23}
+    \end{{itemize}}
+    \textbf{{{experience3}}} \hfill \textbf{{{locatione3}}} \\[-3ex]
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item \textit{{{position3}}} \hfill \color[HTML]{{1C033C}} {timee3}
+    \end{{itemize}}
+    \begin{{itemize}}[label=$\circ$,itemsep=0.5ex,parsep=0.5ex]
+        \item {task31}
+        \item {task32}
+        \item {task33}
+    \end{{itemize}}
+    \section{{EXTRACURRICULAR ACTIVITIES / ENGAGEMENT}}
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item Extracurricular: {extracurricular1}
+        \item Additional Education: {additionaleducation1}
+        \item Certificate & Achievements: {certificates1}
+    \end{{itemize}}
     \section{{SKILLS /& INTEREST}}
     \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
         \item Languages: {languages1}
@@ -107,7 +103,6 @@ def build_latex_code(name, address, phone, email,
     \end{{itemize}}
     \end{{document}}
     """
-
     return latex_code
 
 
