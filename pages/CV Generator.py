@@ -98,7 +98,7 @@ def build_latex_code(name, address, phone, email, university1, locationus1, majo
     \section{{SKILLS /& INTEREST}}
     \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
         \item Languages: {languages1}
-        \item Computer: {computer1}
+        \item Computer Skills: {computer1}
         \item Interests: {interests1}
     \end{{itemize}}
     \end{{document}}
@@ -201,7 +201,7 @@ def build_latex_code2(name, address, phone, email, university1, locationus1, maj
     \section{{SKILLS /& INTEREST}}
     \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
         \item Languages: {languages1}
-        \item Computer: {computer1}
+        \item Computer Skills: {computer1}
         \item Interests: {interests1}
     \end{{itemize}}
     \end{{document}}
@@ -304,7 +304,7 @@ def build_latex_code3(name, address, phone, email, university1, locationus1, maj
     \section{{SKILLS /& INTEREST}}
     \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
         \item Languages: {languages1}
-        \item Computer: {computer1}
+        \item Computer Skills: {computer1}
         \item Interests: {interests1}
     \end{{itemize}}
     \end{{document}}
