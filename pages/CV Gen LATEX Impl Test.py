@@ -237,7 +237,7 @@ with tabs[0]:
         return ''
 
     # Retrieve up to three experience entries from LinkedIn data if they exist
-    experience_entries = linkedin_data.get('experiences', [{} for _ in range(3)])
+    experience_entries = st.session_state['linkedin_data'].get('experiences', [{} for _ in range(3)])
 
     # If there are experience entries from LinkedIn, use them as default values, otherwise use empty strings
     experience1 = experience_entries[0].get('company', '') if experience_entries else ''
