@@ -1618,7 +1618,7 @@ with tabs[5]:
         address_components = [comp for comp in [city, state, country] if comp]
         formatted_address = ', '.join(address_components)
 
-        name = st.text_input("Name", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key_6')
+        name = st.text_input("Full Name (e.g. Max Mustermann)", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key_6')
         address = st.text_input("Address (City, State, Country)", value=formatted_address, key='address_key_6')
         phone = st.text_input("Phone Number", key='phone_key_6')
         email = st.text_input("E-Mail", key='email_key_6')
@@ -1655,17 +1655,17 @@ with tabs[5]:
 
     with st.expander("Education", expanded=False):  # 'expanded=True' means the section will be expanded by default
         university1 = st.text_input("University/School 1", value=university1, key="unique_key_240")
-        locationus1 = st.text_input("Location 1", value=locationus1, key="unique_key_241")
+        locationus1 = st.text_input("Location 1 (City, Country)", value=locationus1, key="unique_key_241")
         majorus1 = st.text_input("Study Program 1", value=majorus1, key="unique_key_242")
-        timeus1 = st.text_input("Time Frame 1", value=timeus1, key="unique_key_243")
+        timeus1 = st.text_input("Time Frame 1 (DD.MM.YYYY - DD.MM.YYYY)", value=timeus1, key="unique_key_243")
         courses1 = st.text_input("Courses 1", key="unique_key_244")
         gpa1 = st.text_input("GPA 1", value=gpa1, key="unique_key_245")
         clubs1 = st.text_input("Clubs/Activities 1", key="unique_key_246")
 
         university2 = st.text_input("University/School 2", value=university2, key="unique_key_247")
-        locationus2 = st.text_input("Location 2", value=locationus2, key="unique_key_248")
+        locationus2 = st.text_input("Location 2 (City, Country)", value=locationus2, key="unique_key_248")
         majorus2 = st.text_input("Study Program 2", value=majorus2, key="unique_key_249")
-        timeus2 = st.text_input("Time Frame 2", value=timeus2, key="unique_key_250")
+        timeus2 = st.text_input("Time Frame 2 (DD.MM.YYYY - DD.MM.YYYY)", value=timeus2, key="unique_key_250")
         courses2 = st.text_input("Courses 2", key="unique_key_251")
         gpa2 = st.text_input("GPA 2", value=gpa2, key="unique_key_252")
         clubs2 = st.text_input("Clubs/Activities 2", key="unique_key_253")
@@ -1707,16 +1707,16 @@ with tabs[5]:
 
     with st.expander("Teaching / Professional Experience", expanded=False):  # 'expanded=True' means the section will be expanded by default
         experience1 = st.text_input("Company / Institution 1", value=experience1, key="unique_key_254")
-        locatione1 = st.text_input("Location 1", value=locatione1, key="unique_key_255")
+        locatione1 = st.text_input("Location 1 (City, Country)", value=locatione1, key="unique_key_255")
         position1 = st.text_input("Position 1", value=position1, key="unique_key_256")
-        timee1 = st.text_input("Time Frame 1", value=timee1, key="unique_key_257")
+        timee1 = st.text_input("Time Frame 1 (DD.MM.YYYY - DD.MM.YYYY)", value=timee1, key="unique_key_257")
         task11 = st.text_area("Tasks 1", key='task11_200', height=100)
         task12 = st.text_area("Tasks 2", key='task12_200', height=100)
 
         experience2 = st.text_input("Company / Institution 2", value=experience2, key="unique_key_258")
-        locatione2 = st.text_input("Location 2", value=locatione2, key="unique_key_259")
+        locatione2 = st.text_input("Location 2 (City, Country)", value=locatione2, key="unique_key_259")
         position2 = st.text_input("Position 2", value=position2, key="unique_key_260")
-        timee2 = st.text_input("Time Frame 2", value=timee2, key="unique_key_261")
+        timee2 = st.text_input("Time Frame 2 (DD.MM.YYYY - DD.MM.YYYY)", value=timee2, key="unique_key_261")
         task21 = st.text_area("Tasks 1", key='task21_200', height=100)
         task22 = st.text_area("Tasks 2", key='task22_200', height=100)
 
@@ -1738,21 +1738,21 @@ with tabs[5]:
 
         extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_6_key")
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_6_key")  # No specific API data, so left for manual input
-        certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_6_key")
+        certificates1 = st.text_input("Certificates and Awards (e.g. Scholarships)", value=certifications_combined, key="certificates_6_key")
 
     # Projects Section
     with st.expander("Projects", expanded=False):  # 'expanded=True' means the section will be expanded by default
         projectname1 = st.text_input("Publication 1", key="project_5")
-        elocation1 = st.text_input("Location 1", key="project_language_5")
+        elocation1 = st.text_input("Location 1 (City, Country)", key="project_language_5")
         ereason1 = st.text_input("Description 1", key="project_function_5")
-        timeen1 = st.text_input("Time Frame 1", key="project_time_5")
+        timeen1 = st.text_input("Time Frame 1 (DD.MM.YYYY - DD.MM.YYYY)", key="project_time_5")
         taske11 = st.text_area("Tasks 1", key="project_task_61", height=100)
         taske12 = st.text_area("Tasks 2", key='project_task_62', height=100)
 
         projectname2 = st.text_input("Publication 2", key="project_6")
-        elocation2 = st.text_input("Location 2", key="project_language_6")
+        elocation2 = st.text_input("Location 2 (City, Country)", key="project_language_6")
         ereason2 = st.text_input("Description 2", key="project_function_6")
-        timeen2 = st.text_input("Time Frame 2", key="project_time_6")
+        timeen2 = st.text_input("Time Frame 2 (DD.MM.YYYY - DD.MM.YYYY)", key="project_time_6")
         taske21 = st.text_area("Tasks 1", key="project_task_71", height=100)
         taske22 = st.text_area("Tasks 2", key='project_task_72', height=100)
 
