@@ -100,7 +100,7 @@ with col1:
 with col2:
     st.subheader("IT 💻")
     st.image(header_image_url4)
-    st.write("As an IT professional, you manage and store data using computers, software, databases, networks, and servers, and your role may include writing programs, maintaining networks, analyzing systems, and providing technical support.") 
+    st.write("As an IT professional, you manage and store data using computers, software, databases, networks, and servers. Your role may include writing programs, maintaining networks, analyzing systems, and providing technical support for customers.") 
 
 # Box 5
 with col1:
