@@ -643,7 +643,7 @@ if 'linkedin_data' not in st.session_state:
 
 st.title("CV Generator 📃")
 
-linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='linkedin_url_key')
+linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='linkedin_url_keyx')
 
 if st.button('Retrieve LinkedIn Data', key='retrieve_data_button'):
         st.session_state['linkedin_data'] = retrieve_info(linkedin_profile_url) or {}
