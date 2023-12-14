@@ -314,10 +314,10 @@ with tabs[0]:
         computer1 = st.text_input("Computer Skills", value=computer_skills_combined, key="computer_skills_key")
         interests1 = st.text_input("Interests", value=interests_combined, key="interests_1_key")
 
-    # Button zum Erstellen des CVs
-    if st.button("Generate LaTeX", key="unique_key_143"):
+    if st.button("Generate LaTeX"):
         latex_code = build_latex_code(name, address, phone, email, university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1, university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2, experience1, locatione1, position1, timee1, task11, task12, task13, experience2, locatione2, position2, timee2, task21, task22, task23, experience3, locatione3, position3, timee3, task31, task32, task33, extracurricular1, additionaleducation1, certificates1, languages1, computer1, interests1)
         st.text_area("Generated LaTeX Code:", latex_code, height=300)
+        
         st.markdown("### How to Create a Pdf with this LaTeX Code")
         st.markdown("""
         - Copy the entire LaTeX code above.
