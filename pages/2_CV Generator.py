@@ -997,7 +997,7 @@ with tabs[1]:
         locatione1 = st.text_input("Location 1 (City, Country)", value=locatione1, key="unique_key_159")
         position1 = st.text_input("Position 1", value=position1, key="unique_key_160")
         timee1 = st.text_input("Time Frame 1 (DD.MM.YYYY - DD.MM.YYYY)", value=timee1, key="unique_key_161")
-        task11 = st.text_area("Tasks 1", key='task11_28', height=100)
+        task11 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task11_28', height=100)
         task12 = st.text_area("Tasks 2", key='task12_29', height=100)
         task13 = st.text_area("Tasks 3", key='task13_30', height=100)
 
@@ -1005,7 +1005,7 @@ with tabs[1]:
         locatione2 = st.text_input("Location 2 (City, Country)", value=locatione2, key="unique_key_163")
         position2 = st.text_input("Position 2", value=position2, key="unique_key_164")
         timee2 = st.text_input("Time Frame 2 (DD.MM.YYYY - DD.MM.YYYY)", value=timee2, key="unique_key_165")
-        task21 = st.text_area("Tasks 1", key='task21_31', height=100)
+        task21 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task21_31', height=100)
         task22 = st.text_area("Tasks 2", key='task22_32', height=100)
         task23 = st.text_area("Tasks 3", key='task23_33', height=100)
 
@@ -1013,7 +1013,7 @@ with tabs[1]:
         locatione3 = st.text_input("Location 3 (City, Country)", value=locatione3, key="unique_key_167")
         position3 = st.text_input("Position 3", value=position3, key="unique_key_168")
         timee3 = st.text_input("Time Frame 3 (DD.MM.YYYY - DD.MM.YYYY)", value=timee3, key="unique_key_169")
-        task31 = st.text_area("Tasks 1", key='task31_34', height=100)
+        task31 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task31_34', height=100)
         task32 = st.text_area("Tasks 2", key='task32_35', height=100)
         task33 = st.text_area("Tasks 3", key='task33_36', height=100)
 
@@ -1035,7 +1035,7 @@ with tabs[1]:
 
         extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_2_key")
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_2_key")  # No specific API data, so left for manual input
-        certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_2_key")
+        certificates1 = st.text_input("Certificates and Awards (e.g. Scholarships)", value=certifications_combined, key="certificates_2_key")
 
     # Skills & Interest Section
     # Wrap the Skills & Interest section in an expander
