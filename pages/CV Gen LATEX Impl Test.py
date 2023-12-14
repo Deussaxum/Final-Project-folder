@@ -624,7 +624,7 @@ with tabs[1]:
     # Wrap the Skills & Interest section in an expander
     with st.expander("Skills & Interest", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the computer skills entries from LinkedIn data if they exist
-        computer_skills_entries = linkedin_data.get('computer_skills', [''])  # Assuming it's a list of titles
+        computer_skills_entries = st.session_state['linkedin_data'].get('computer_skills', [''])
 
         # Join the first three entries for languages, interests, and computer skills with a comma
         languages_combined = ', '.join(languages_entries[0:3])
