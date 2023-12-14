@@ -1945,7 +1945,7 @@ with tabs[5]:
         research1 = st.text_area("Research", key='technologies_10_key', height=100)
 
     if st.button("Generate LaTeX", key='generate_latex_button_tab6'):
-        latex_code = build_latex_code6(name, address, phone, email, university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1, university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2, experience1, locatione1, position1, timee1, task11, task12, experience2, locatione2, position2, timee2, task21, task22, extracurricular1, additionaleducation1, certificates1, languages1, projectname1, projectname2, planguage1, pfunction1, timep1, taskp11, taskp12, planguage2, pfunction2, timep2, taskp21, taskp22, technologies1)
+        latex_code = build_latex_code6(name, address, phone, email, university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1, university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2, experience1, locatione1, position1, timee1, task11, task12, experience2, locatione2, position2, timee2, task21, task22, extracurricular1, additionaleducation1, certificates1, languages1, projectname1,projectname2, elocation1, ereason1, timeen1, taske11, taske12, elocation2, timeen2, taske21, taske22, speeches1, research1, ereason2)
         st.text_area("Generated LaTeX Code:", latex_code, height=300, key="d")
         
         st.markdown("### How to Create a Pdf with this LaTeX Code")
