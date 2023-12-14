@@ -125,12 +125,6 @@ with col2: #In column 2 row 3
     st.image(header_image_url6)#Display an image related to Start-Up
     st.write("In a startup, you typically wear multiple hats, taking on various responsibilities that can range from strategic planning to hands-on execution. Your role may involve setting direction, creating culture, and driving growth, all while adapting to the fast-paced and ever-changing startup environment.")
     #Display text related to Start-Up
-# Box 7
-with col1: #In column 1 row 4
-    st.subheader("Law 👨🏼‍⚖️")#Display a subheader for LaW
-    st.image(header_image_url7) #Display an image related to Law
-    st.write("As a lawyer, you will undertake a diverse range of tasks and responsibilities, with a primary focus on defending your clients. Various specialized areas within the legal field offer opportunities for practice, and one illustrative example is tax law.")
-    #Display text related to Law
 
 # Display a message in the sidebar
 # Source: https://www.youtube.com/watch?v=YClmpnpszq8
