@@ -708,7 +708,7 @@ with tabs[0]:
         formatted_address = ', '.join(address_components)
 
         name = st.text_input("Name", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key')
-        address = st.text_input("Address", value=formatted_address, key='address_key')
+        address = st.text_input("Address (City, State, Country)", value=formatted_address, key='address_key')
         phone = st.text_input("Phone Number", key='phone_key')
         email = st.text_input("E-Mail", key='email_key')
 
@@ -878,7 +878,7 @@ with tabs[1]:
         formatted_address = ', '.join(address_components)
 
         name = st.text_input("Name", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key_2')
-        address = st.text_input("Address", value=formatted_address, key='address_key_2')
+        address = st.text_input("Address (City, State, Country)", value=formatted_address, key='address_key_2')
         phone = st.text_input("Phone Number", key='phone_key_2')
         email = st.text_input("E-Mail", key='email_key_2')
 
@@ -1053,7 +1053,7 @@ with tabs[2]:
         formatted_address = ', '.join(address_components)
 
         name = st.text_input("Name", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key_3')
-        address = st.text_input("Address", value=formatted_address, key='address_key_3')
+        address = st.text_input("Address (City, State, Country)", value=formatted_address, key='address_key_3')
         phone = st.text_input("Phone Number", key='phone_key_3')
         email = st.text_input("E-Mail", key='email_key_3')
 
@@ -1228,7 +1228,7 @@ with tabs[3]:
         formatted_address = ', '.join(address_components)
 
         name = st.text_input("Name", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key_4')
-        address = st.text_input("Address", value=formatted_address, key='address_key_4')
+        address = st.text_input("Address (City, State, Country)", value=formatted_address, key='address_key_4')
         phone = st.text_input("Phone Number", key='phone_key_4')
         email = st.text_input("E-Mail", key='email_key_4')
 
@@ -1411,7 +1411,7 @@ with tabs[4]:
         formatted_address = ', '.join(address_components)
 
         name = st.text_input("Name", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key_5')
-        address = st.text_input("Address", value=formatted_address, key='address_key_5')
+        address = st.text_input("Address (City, State, Country)", value=formatted_address, key='address_key_5')
         phone = st.text_input("Phone Number", key='phone_key_5')
         email = st.text_input("E-Mail", key='email_key_5')
 
@@ -1593,7 +1593,7 @@ with tabs[5]:
         formatted_address = ', '.join(address_components)
 
         name = st.text_input("Name", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key_6')
-        address = st.text_input("Address", value=formatted_address, key='address_key_6')
+        address = st.text_input("Address (City, State, Country)", value=formatted_address, key='address_key_6')
         phone = st.text_input("Phone Number", key='phone_key_6')
         email = st.text_input("E-Mail", key='email_key_6')
 
