@@ -1566,14 +1566,14 @@ with tabs[4]:
         planguage1 = st.text_input("Programming Language 1", key="project_language_3")
         pfunction1 = st.text_input("Function 1", key="project_function_3")
         timep1 = st.text_input("Time Frame 1", key="project_time_3")
-        taskp11 = st.text_area("Tasks 1", key="project_task_31", height=100)
+        taskp11 = st.text_area("Tasks 1 (Think about what you did)", key="project_task_31", height=100)
         taskp12 = st.text_area("Tasks 2", key='project_task_32', height=100)
 
         projectname2 = st.text_input("Project Name 2", key="project_4")
         planguage2 = st.text_input("Programming Language 1", key="project_language_4")
         pfunction2 = st.text_input("Function 1", key="project_function_4")
         timep2 = st.text_input("Time Frame 1", key="project_time_4")
-        taskp21 = st.text_area("Tasks 1", key="project_task_41", height=100)
+        taskp21 = st.text_area("Tasks 1 (Think about what you did)", key="project_task_41", height=100)
         taskp22 = st.text_area("Tasks 2", key='project_task_42', height=100)
 
     # Skills & Interest Section
