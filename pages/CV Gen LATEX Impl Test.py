@@ -491,7 +491,7 @@ with tabs[1]:
         name = st.text_input("Name", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key_2')
         address = st.text_input("Address", value=formatted_address, key='address_key_2')
         phone = st.text_input("Phone Number", key='phone_key_2')
-        email = st.text_input("E-Mail", key='email_key_2')
+        email = st.text_input("E-Mail", key='email_key_3')
 
     # Education Section
     # Assuming the first two education entries in LinkedIn data (if they exist) are to be used
