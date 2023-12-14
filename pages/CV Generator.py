@@ -1350,7 +1350,7 @@ with tabs[3]:
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_4_key")
 
     # Projects Section
-    with st.expander("Projects", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Entrepreneurial Projects", expanded=False):  # 'expanded=True' means the section will be expanded by default
         projectname1 = st.text_input("Project Name 1", key="project_1")
         elocation1 = st.text_input("Location 1", key="project_location_1")
         ereason1 = st.text_input("Reason for the Project 1", key="project_reason_1")
@@ -1378,7 +1378,7 @@ with tabs[3]:
 
         languages1 = st.text_input("Languages", value=languages_combined, key="languages_4_key")
         computer1 = st.text_input("Computer Skills", value=computer_skills_combined, key="computer_skills_key_4")
-        interests1 = st.text_input("Interests", value=interests_combined, key="interests_4_key")
+        interests1 = st.text_input("Start-Up Interests", value=interests_combined, key="interests_4_key")
 
     
 
