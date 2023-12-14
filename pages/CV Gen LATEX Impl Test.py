@@ -236,8 +236,8 @@ with tabs[0]:
             return f"{day:02d}.{month:02d}.{year}" if year else ''
         return ''
 
-    # Retrieve up to three experience entries from LinkedIn data if they exist
-    experience_entries = linkedin_data.get('experiences', [{} for _ in range(3)])
+        # Retrieve experience entries from session state or initialize with defaults
+    experience_entries = st.session_state['linkedin_data'].get('experiences', [{} for _ in range(3)])
 
     # If there are experience entries from LinkedIn, use them as default values, otherwise use empty strings
     experience1 = experience_entries[0].get('company', '') if experience_entries else ''
@@ -261,30 +261,12 @@ with tabs[0]:
     ends_at3 = format_date(experience_entries[2].get('ends_at')) if len(experience_entries) > 2 else ''
     timee3 = f"{starts_at3} - {ends_at3}" if ends_at3 else starts_at3
 
-    with st.expander("Professional Experience", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Professional Experience", expanded=False):
         experience1 = st.text_input("Company 1", value=experience1, key="unique_key_131")
         locatione1 = st.text_input("Location 1", value=locatione1, key="unique_key_132")
         position1 = st.text_input("Position 1", value=position1, key="unique_key_133")
         timee1 = st.text_input("Time Frame 1", value=timee1, key="unique_key_134")
         task11 = st.text_area("Tasks 1", key='task11_19', height=100)
-        task12 = st.text_area("Tasks 2", key='task12_20', height=100)
-        task13 = st.text_area("Tasks 3", key='task13_21', height=100)
-
-        experience2 = st.text_input("Company 2", value=experience2, key="unique_key_135")
-        locatione2 = st.text_input("Location 2", value=locatione2, key="unique_key_136")
-        position2 = st.text_input("Position 2", value=position2, key="unique_key_137")
-        timee2 = st.text_input("Time Frame 2", value=timee2, key="unique_key_138")
-        task21 = st.text_area("Tasks 1", key='task21_22', height=100)
-        task22 = st.text_area("Tasks 2", key='task22_23', height=100)
-        task23 = st.text_area("Tasks 3", key='task23_24', height=100)
-
-        experience3 = st.text_input("Company 3", value=experience3, key="unique_key_139")
-        locatione3 = st.text_input("Location 3", value=locatione3, key="unique_key_140")
-        position3 = st.text_input("Position 3", value=position3, key="unique_key_141")
-        timee3 = st.text_input("Time Frame 3", value=timee3, key="unique_key_142")
-        task31 = st.text_area("Tasks 1", key='task31_25', height=100)
-        task32 = st.text_area("Tasks 2", key='task32_26', height=100)
-        task33 = st.text_area("Tasks 3", key='task33_27', height=100)
 
     # Extracurricular Activities / Engagement Section
     with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
