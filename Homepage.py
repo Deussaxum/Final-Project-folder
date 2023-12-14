@@ -90,7 +90,7 @@ col1, col2 = st.columns(2)
 # Define content for each box, including subheaders, images, and descriptions
 # Box 1
 with col1:
-    st.subheader("Consulting 🛫")
+    st.subheader("Consulting 🧮")
     st.image(header_image_url1)
     st.write("As a consultant, you provide expert advice to organizations, helping them improve performance, operations, and profitability. Your role involves analyzing situations, identifying problems, and presenting comprehensive solutions to meet client needs.")
 
