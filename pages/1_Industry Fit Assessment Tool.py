@@ -251,3 +251,7 @@ if __name__ == "__main__":
 #module 10 of lecture 
 #Video Series about creating graphs in streamlit (https://www.youtube.com/watch?v=cUKqsnLGQBw)
 #picture created using generative AI (Chat GPT-4.0)
+#https://talentagent.de/karriereguide/investmentbanker
+#https://www.efinancialcareers.ch/nachrichten/2015/11/die-elf-charakterzuge-die-erfolgreiche-investmentbanker-ausmachen
+#https://www.experteer.de/magazin/karriere-im-consulting-diese-10-top-skills-brauchen-sie/
+     
