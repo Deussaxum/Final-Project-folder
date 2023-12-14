@@ -267,6 +267,8 @@ with tabs[0]:
         position1 = st.text_input("Position 1", value=position1, key="unique_key_133")
         timee1 = st.text_input("Time Frame 1", value=timee1, key="unique_key_134")
         task11 = st.text_area("Tasks 1", key='task11_19', height=100)
+        task12 = st.text_area("Tasks 2", key='task22_23', height=100)
+        task13 = st.text_area("Tasks 3", key='task23_24', height=100)
 
         experience2 = st.text_input("Company 2", value=experience2, key="unique_key_135")
         locatione2 = st.text_input("Location 2", value=locatione2, key="unique_key_136")
