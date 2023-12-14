@@ -1377,7 +1377,7 @@ with tabs[3]:
         computer_skills_combined = ', '.join(computer_skills_entries[0:3])
 
         languages1 = st.text_input("Languages", value=languages_combined, key="languages_4_key")
-        computer1 = st.text_input("Computer Skills", value=computer_skills_combined, key="computer_skills_key_4")
+        computer1 = st.text_input("Programming", value=computer_skills_combined, key="computer_skills_key_4")
         interests1 = st.text_input("Start-Up Interests", value=interests_combined, key="interests_4_key")
 
     
