@@ -1550,7 +1550,7 @@ with tabs[4]:
 
     # Skills & Interest Section
     # Wrap the Skills & Interest section in an expander
-    with st.expander("Skills & Interest", expanded=False):  # 'expanded=True' means the section will be expanded by default
+    with st.expander("Skills", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the computer skills entries from LinkedIn data if they exist
         computer_skills_entries = st.session_state['linkedin_data'].get('computer_skills', [''])
 
