@@ -675,7 +675,7 @@ with tabs[0]:
 
     # Function to retrieve information
     def retrieve_info(linkedin_profile_url):
-        api_key = '_EIqMpWEbOnJLoQvNFz1CQ'
+        api_key = 'OQfhKnmj2k9bUHmlHH9Qbg'
         headers = {'Authorization': 'Bearer ' + api_key}
         api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
         params = {'linkedin_profile_url': linkedin_profile_url}
