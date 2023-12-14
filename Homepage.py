@@ -8,7 +8,7 @@ st.set_page_config(
 
 header_image_url = "skyline_homepage.png"
 st.image(header_image_url)
-#https://cdn.thenudge.com/wp-content/uploads/2022/09/skyline.png
+
 st.title("The Career Compass")
 st.subheader("Creating your own CV has never been easier!")
 
@@ -65,6 +65,7 @@ with col2:
    
     st.image(diagramm_image_url4)
 
+st.subheader("Industry Overview")
 #defintion of the file paths for the pictures below    
   
 header_image_url1 = "Consulting.Picture.jpeg"
