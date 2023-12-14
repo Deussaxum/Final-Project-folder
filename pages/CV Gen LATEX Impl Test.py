@@ -105,6 +105,109 @@ def build_latex_code(name, address, phone, email, university1, locationus1, majo
     """
     return latex_code
 
+def build_latex_code2(name, address, phone, email, university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1, university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2, experience1, locatione1, position1, timee1, task11, task12, task13, experience2, locatione2, position2, timee2, task21, task22, task23, experience3, locatione3, position3, timee3, task31, task32, task33, extracurricular1, additionaleducation1, certificates1, languages1, computer1, interests1):
+    latex_code = fr"""
+    % Hier kommt Ihr LaTeX-Code
+    \documentclass[a4paper,8pt]{{article}}
+    \usepackage{{parskip}}
+    \usepackage{{hologo}}
+    \usepackage{{fontspec}}
+    \RequirePackage{{color}}
+    \RequirePackage{{graphicx}}
+    \usepackage[usenames,dvipsnames]{{xcolor}}
+    \usepackage[scale=0.9, top=.4in, bottom=.4in]{{geometry}}
+    \usepackage{{enumitem}}
+    \usepackage{{tabularx}}
+    \usepackage{{enumitem}}
+    \newcolumntype{{C}}{{>{{\centering\arraybackslash}}X}}
+    \usepackage{{supertabular}}
+    \usepackage{{tabularx}}
+    \newlength{{\fullcollw}}
+    \setlength{{\fullcollw}}{{0.42\textwidth}}
+    \usepackage{{titlesec}}             
+    \usepackage{{multicol}}
+    \usepackage{{multirow}}
+    \titleformat{{\section}}{{\Large\scshape\raggedright}}{{}}{{0em}}{{}}[\titlerule]
+    \titlespacing{{\section}}{{0pt}}{{2pt}}{{2pt}}
+    \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{{biblatex}}
+    \usepackage[unicode, draft=false]{{hyperref}}
+    \color[HTML]{{110223}}
+    \addbibresource{{citations.bib}}
+    \setlength\bibitemsep{{1em}}
+    \usepackage{{fontawesome5}}
+    \usepackage[normalem]{{ulem}}
+    \setmainfont{{Arial}}
+    \begin{{document}}
+    \pagestyle{{empty}}
+    \begin{{tabularx}}{{\linewidth}}{{@{{}} C @{{}}}}
+    \color[HTML]{{1C033C}} \Huge\textbf{{{name}}} \\[6pt]
+    \textcolor[HTML]{{1C033C}} Address: {address} \\
+    \textcolor[HTML]{{1C033C}} Mobile: {phone} \\
+    \textcolor[HTML]{{1C033C}} Email: {email}
+    \end{{tabularx}}
+    \section{{EDUCATION}}
+    \textbf{{{university1}}} \hfill \textbf{{{locationus1}}} \\[-3ex]
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item {majorus1} \hfill \color[HTML]{{1C033C}} {timeus1}
+    \end{{itemize}}
+    \begin{{itemize}}[label=$\circ$,itemsep=0.5ex,parsep=0.5ex]
+        \item Courses: {courses1}
+        \item GPA: {gpa1}
+        \item {clubs1}
+    \end{{itemize}}
+    \textbf{{{university2}}} \hfill \textbf{{{locationus2}}} \\[-3ex]
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item {majorus2} \hfill \color[HTML]{{1C033C}} {timeus2}
+    \end{{itemize}}
+    \begin{{itemize}}[label=$\circ$,itemsep=0.5ex,parsep=0.5ex]
+        \item Courses: {courses2}
+        \item GPA: {gpa2}
+        \item {clubs2}
+    \end{{itemize}}
+    \section{{PROFESSIONAL EXPERIENCE}}
+    \textbf{{{experience1}}} \hfill \textbf{{{locatione1}}} \\[-3ex]
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item \textit{{{position1}}} \hfill \color[HTML]{{1C033C}} {timee1}
+    \end{{itemize}}
+    \begin{{itemize}}[label=$\circ$,itemsep=0.5ex,parsep=0.5ex]
+        \item {task11}
+        \item {task12}
+        \item {task13}
+    \end{{itemize}}
+    \textbf{{{experience2}}} \hfill \textbf{{{locatione2}}} \\[-3ex]
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item \textit{{{position2}}} \hfill \color[HTML]{{1C033C}} {timee2}
+    \end{{itemize}}
+    \begin{{itemize}}[label=$\circ$,itemsep=0.5ex,parsep=0.5ex]
+        \item {task21}
+        \item {task22}
+        \item {task23}
+    \end{{itemize}}
+    \textbf{{{experience3}}} \hfill \textbf{{{locatione3}}} \\[-3ex]
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item \textit{{{position3}}} \hfill \color[HTML]{{1C033C}} {timee3}
+    \end{{itemize}}
+    \begin{{itemize}}[label=$\circ$,itemsep=0.5ex,parsep=0.5ex]
+        \item {task31}
+        \item {task32}
+        \item {task33}
+    \end{{itemize}}
+    \section{{EXTRACURRICULAR ACTIVITIES / ENGAGEMENT}}
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item Extracurricular: {extracurricular1}
+        \item Additional Education: {additionaleducation1}
+        \item Certificate & Achievements: {certificates1}
+    \end{{itemize}}
+    \section{{SKILLS /& INTEREST}}
+    \begin{{itemize}}[label={{\large\textbullet}}, left=0pt, itemsep=0.5ex, parsep=0.5ex]
+        \item Languages: {languages1}
+        \item Computer: {computer1}
+        \item Interests: {interests1}
+    \end{{itemize}}
+    \end{{document}}
+    """
+    return latex_code
+
 
 # Initialize session state for LinkedIn data
 if 'linkedin_data' not in st.session_state:
