@@ -832,7 +832,7 @@ with tabs[0]:
         volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
         certifications_combined = ', '.join(certifications_titles[0:3])
 
-        extracurricular1 = st.text_input("Extracurricular Activities", value=volunteer_work_combined, key="extracurricular_1_key")
+        extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_1_key")
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_1_key")
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_1_key")
 
@@ -1005,7 +1005,7 @@ with tabs[1]:
         volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
         certifications_combined = ', '.join(certifications_titles[0:3])
 
-        extracurricular1 = st.text_input("Extracurricular Activities", value=volunteer_work_combined, key="extracurricular_2_key")
+        extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_2_key")
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_2_key")  # No specific API data, so left for manual input
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_2_key")
 
@@ -1180,7 +1180,7 @@ with tabs[2]:
         volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
         certifications_combined = ', '.join(certifications_titles[0:3])
 
-        extracurricular1 = st.text_input("Extracurricular Activities", value=volunteer_work_combined, key="extracurricular_3_key")
+        extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_3_key")
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_3_key")  # No specific API data, so left for manual input
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_3_key")
 
@@ -1345,7 +1345,7 @@ with tabs[3]:
         volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
         certifications_combined = ', '.join(certifications_titles[0:3])
 
-        extracurricular1 = st.text_input("Extracurricular Activities", value=volunteer_work_combined, key="extracurricular_4_key")
+        extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_4_key")
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_4_key")  # No specific API data, so left for manual input
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_4_key")
 
@@ -1528,7 +1528,7 @@ with tabs[4]:
         volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
         certifications_combined = ', '.join(certifications_titles[0:3])
 
-        extracurricular1 = st.text_input("Extracurricular Activities", value=volunteer_work_combined, key="extracurricular_5_key")
+        extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_5_key")
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_5_key")  # No specific API data, so left for manual input
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_5_key")
 
@@ -1710,7 +1710,7 @@ with tabs[5]:
         volunteer_work_combined = ', '.join(volunteer_work_titles[0:3])
         certifications_combined = ', '.join(certifications_titles[0:3])
 
-        extracurricular1 = st.text_input("Extracurricular Activities", value=volunteer_work_combined, key="extracurricular_6_key")
+        extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_6_key")
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_6_key")  # No specific API data, so left for manual input
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_6_key")
 
