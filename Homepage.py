@@ -118,6 +118,6 @@ with col2:
 with col1:
     st.subheader("Law 👨🏼‍⚖️")
     st.image(header_image_url7)
-    st.write("As a lawyer, you will engage in a variety of tasks and responsibilities - your main one will be defending your clients. There are different areas in which you can work as a lawyer, one example is tax law.")
+    st.write("As a lawyer, you will undertake a diverse range of tasks and responsibilities, with a primary focus on defending your clients. Various specialized areas within the legal field offer opportunities for practice, and one illustrative example is tax law.")
 
 st.sidebar.success("Please select a page Above.")
