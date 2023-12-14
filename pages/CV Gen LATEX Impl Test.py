@@ -1440,7 +1440,6 @@ with tabs[3]:
         timee1 = st.text_input("Time Frame 1", value=timee1, key="unique_key_213")
         task11 = st.text_area("Tasks 1", key='task11_46', height=100)
         task12 = st.text_area("Tasks 2", key='task12_47', height=100)
-        task13 = st.text_area("Tasks 3", key='task13_48', height=100)
 
         experience2 = st.text_input("Company 2", value=experience2, key="unique_key_214")
         locatione2 = st.text_input("Location 2", value=locatione2, key="unique_key_215")
@@ -1448,15 +1447,6 @@ with tabs[3]:
         timee2 = st.text_input("Time Frame 2", value=timee2, key="unique_key_217")
         task21 = st.text_area("Tasks 1", key='task21_49', height=100)
         task22 = st.text_area("Tasks 2", key='task22_50', height=100)
-        task23 = st.text_area("Tasks 3", key='task23_51', height=100)
-
-        experience3 = st.text_input("Company 3", value=experience3, key="unique_key_218")
-        locatione3 = st.text_input("Location 3", value=locatione3, key="unique_key_219")
-        position3 = st.text_input("Position 3", value=position3, key="unique_key_220")
-        timee3 = st.text_input("Time Frame 3", value=timee3, key="unique_key_221")
-        task31 = st.text_area("Tasks 1", key='task31_52', height=100)
-        task32 = st.text_area("Tasks 2", key='task32_53', height=100)
-        task33 = st.text_area("Tasks 3", key='task33_54', height=100)
 
     # Extracurricular Activities / Engagement Section
     with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
@@ -1478,6 +1468,22 @@ with tabs[3]:
         additionaleducation1 = st.text_input("Additional Education", key="additional_education_4_key")  # No specific API data, so left for manual input
         certificates1 = st.text_input("Certificates and Awards", value=certifications_combined, key="certificates_4_key")
 
+    # Projects Section
+    with st.expander("Projects", expanded=False):  # 'expanded=True' means the section will be expanded by default
+        projectname1 = st.text_input("Project Name 1", key="project_1")
+        elocation1 = st.text_input("Location 1", key="project_location_1")
+        ereason1 = st.text_input("Reason for the Project 1", key="project_reason_1")
+        timeen1 = st.text_input("Time Frame 1", key="project_time_1")
+        taske11 = st.text_area("Tasks 1", key="project_task_11", height=100)
+        taske12 = st.text_area("Tasks 2", key='project_task_12', height=100)
+
+        projectname2 = st.text_input("Project Name 2", key="project_2")
+        elocation2 = st.text_input("Location 2", key="project_location_2")
+        ereason2 = st.text_input("Reason for the Project 2", key="project_reason_2")
+        timeen2 = st.text_input("Time Frame 2", key="project_time_2")
+        taske21 = st.text_area("Tasks 1", key="project_task_21", height=100)
+        taske22 = st.text_area("Tasks 2", key='project_task_22', height=100)
+
     # Skills & Interest Section
     # Wrap the Skills & Interest section in an expander
     with st.expander("Skills & Interest", expanded=False):  # 'expanded=True' means the section will be expanded by default
@@ -1492,6 +1498,8 @@ with tabs[3]:
         languages1 = st.text_input("Languages", value=languages_combined, key="languages_4_key")
         computer1 = st.text_input("Computer Skills", value=computer_skills_combined, key="computer_skills_key_4")
         interests1 = st.text_input("Interests", value=interests_combined, key="interests_4_key")
+
+    
 
     if st.button("Generate LaTeX", key='generate_latex_button_tab4'):
         latex_code = build_latex_code(name, address, phone, email, university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1, university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2, experience1, locatione1, position1, timee1, task11, task12, experience2, locatione2, position2, timee2, task21, task22, extracurricular1, additionaleducation1, certificates1, languages1, projectname1,projectname2, elocation1, ereason1, timeen1, taske11, taske12, elocation2, timeen2, taske21, taske22, computer1, interests1, ereason2)
