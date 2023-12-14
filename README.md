@@ -1,7 +1,7 @@
 # Career Compass Web Application
 
 ## Overview
-Career Compass is a web application based on Streamlit that helps job seekers identify suitable industries for career progression and create tailored CVs. The application has a user-friendly interface and integrates with the Nubela API, providing a comprehensive suite of tools for professional development.
+Career Compass is a web application based on Streamlit that helps job seekers identify suitable industries for career progression, create tailored CVs and finds suitable job postings. The application has a user-friendly interface and integrates with the Nubela API, providing a comprehensive suite of tools for professional development.
 
 ## Homepage
 - **Purpose:** This section provides an introduction to the purpose of the website, explains the process, and the industries covered by the web application.
