@@ -268,6 +268,22 @@ with tabs[0]:
         timee1 = st.text_input("Time Frame 1", value=timee1, key="unique_key_134")
         task11 = st.text_area("Tasks 1", key='task11_19', height=100)
 
+        experience2 = st.text_input("Company 2", value=experience2, key="unique_key_135")
+        locatione2 = st.text_input("Location 2", value=locatione2, key="unique_key_136")
+        position2 = st.text_input("Position 2", value=position2, key="unique_key_137")
+        timee2 = st.text_input("Time Frame 2", value=timee2, key="unique_key_138")
+        task21 = st.text_area("Tasks 1", key='task21_22', height=100)
+        task22 = st.text_area("Tasks 2", key='task22_23', height=100)
+        task23 = st.text_area("Tasks 3", key='task23_24', height=100)
+
+        experience3 = st.text_input("Company 3", value=experience3, key="unique_key_139")
+        locatione3 = st.text_input("Location 3", value=locatione3, key="unique_key_140")
+        position3 = st.text_input("Position 3", value=position3, key="unique_key_141")
+        timee3 = st.text_input("Time Frame 3", value=timee3, key="unique_key_142")
+        task31 = st.text_area("Tasks 1", key='task31_25', height=100)
+        task32 = st.text_area("Tasks 2", key='task32_26', height=100)
+        task33 = st.text_area("Tasks 3", key='task33_27', height=100)
+
     # Extracurricular Activities / Engagement Section
     with st.expander("Extracurricular Activities", expanded=False):  # 'expanded=True' means the section will be expanded by default
         # Retrieve the volunteer work, certifications, languages, and interests from LinkedIn data if they exist
