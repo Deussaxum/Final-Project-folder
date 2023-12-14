@@ -1679,15 +1679,15 @@ with tabs[5]:
     ends_at3 = format_date(experience_entries[2].get('ends_at')) if len(experience_entries) > 2 else ''
     timee3 = f"{starts_at3} - {ends_at3}" if ends_at3 else starts_at3
 
-    with st.expander("Professional Experience", expanded=False):  # 'expanded=True' means the section will be expanded by default
-        experience1 = st.text_input("Company 1", value=experience1, key="unique_key_254")
+    with st.expander("Teaching / Professional Experience", expanded=False):  # 'expanded=True' means the section will be expanded by default
+        experience1 = st.text_input("Company / Institution 1", value=experience1, key="unique_key_254")
         locatione1 = st.text_input("Location 1", value=locatione1, key="unique_key_255")
         position1 = st.text_input("Position 1", value=position1, key="unique_key_256")
         timee1 = st.text_input("Time Frame 1", value=timee1, key="unique_key_257")
         task11 = st.text_area("Tasks 1", key='task11_200', height=100)
         task12 = st.text_area("Tasks 2", key='task12_200', height=100)
 
-        experience2 = st.text_input("Company 2", value=experience2, key="unique_key_258")
+        experience2 = st.text_input("Company / Institution 2", value=experience2, key="unique_key_258")
         locatione2 = st.text_input("Location 2", value=locatione2, key="unique_key_259")
         position2 = st.text_input("Position 2", value=position2, key="unique_key_260")
         timee2 = st.text_input("Time Frame 2", value=timee2, key="unique_key_261")
