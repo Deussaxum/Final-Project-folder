@@ -27,10 +27,10 @@ st.info("""
 
 
 st.subheader("HOW IT WORKS")  #Display a subheader
-st.info("1. Determine which industry suits you best by taking our test based on the Industry Fit Assessment.")
-st.info("2. Choose the industry you want your CV to be tailored to by going to the CV Generator and choosing the industry.")
-st.info("3. If you already know which industry to apply for, you can directly go to the CV Generator and choose the corresponding industry.")
-st.info("4. In case you are having a LinkedIn account, use our LinkedIn tool to retrieve your profile information to accelerate the generation of your CV.")
+st.info("1. Determine which industry suits you best by completing our Industry Fit Assessment.")
+st.info("2. Choose the industry you want your CV to be tailored to by going to the CV Generator and choosing the right industry.")
+st.info("3. If you already know which industry to apply for, you can directly go to the CV Generator and choose the corresponding industry without completing the test.")
+st.info("4. In case you have a LinkedIn account, use our LinkedIn tool to retrieve your profile information to accelerate the generation of your CV.")
 # Display information about how the system works, using info function - in this case line by line, creating 4 boxes.
 
 
