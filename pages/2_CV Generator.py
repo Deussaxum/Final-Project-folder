@@ -670,7 +670,7 @@ def extract_info(jsondata):
 # IMPORTANT: This is not considered scraping, since it is reduced to retrieve public information from only one profile at once.
 # Function to retrieve information via API (nubela)
 def retrieve_info(linkedin_profile_url):
-    api_key = 'EIqMpWEbOnJLoQvNFz1CQ'
+    api_key = '_EIqMpWEbOnJLoQvNFz1CQ'
     headers = {'Authorization': 'Bearer ' + api_key}
     api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
     params = {'linkedin_profile_url': linkedin_profile_url}
