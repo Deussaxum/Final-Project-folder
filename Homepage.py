@@ -124,11 +124,3 @@ with col2:
     st.image(header_image_url6)
     st.write("In a startup, you typically wear multiple hats, taking on various responsibilities that can range from strategic planning to hands-on execution. Your role may involve setting direction, creating culture, and driving growth, all while adapting to the fast-paced and ever-changing startup environment.")
 
-# Box 7
-with col1:
-    st.subheader("Law 👨🏼‍⚖️")
-    st.image(header_image_url7)
-    st.write("As a lawyer, you will undertake a diverse range of tasks and responsibilities, with a primary focus on defending your clients. Various specialized areas within the legal field offer opportunities for practice, and one illustrative example is tax law.")
-
-# Display a message in the sidebar
-st.sidebar.success("Please select a page Above.")
