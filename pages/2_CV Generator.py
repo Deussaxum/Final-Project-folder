@@ -1347,14 +1347,14 @@ with tabs[3]:
         locatione1 = st.text_input("Location 1 (City, Country)", value=locatione1, key="unique_key_211")
         position1 = st.text_input("Position 1", value=position1, key="unique_key_212")
         timee1 = st.text_input("Time Frame 1 (DD.MM.YYYY - DD.MM.YYYY)", value=timee1, key="unique_key_213")
-        task11 = st.text_area("Tasks 1", key='task11_46', height=100)
+        task11 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task11_46', height=100)
         task12 = st.text_area("Tasks 2", key='task12_47', height=100)
 
         experience2 = st.text_input("Company 2", value=experience2, key="unique_key_214")
         locatione2 = st.text_input("Location 2 (City, Country)", value=locatione2, key="unique_key_215")
         position2 = st.text_input("Position 2", value=position2, key="unique_key_216")
         timee2 = st.text_input("Time Frame 2 (DD.MM.YYYY - DD.MM.YYYY)", value=timee2, key="unique_key_217")
-        task21 = st.text_area("Tasks 1", key='task21_49', height=100)
+        task21 = st.text_area("Tasks 1 (Think about what your responsibilities were)", key='task21_49', height=100)
         task22 = st.text_area("Tasks 2", key='task22_50', height=100)
 
     # Extracurricular Activities / Engagement Section
@@ -1383,14 +1383,14 @@ with tabs[3]:
         elocation1 = st.text_input("Location 1 (City, Country)", key="project_location_1")
         ereason1 = st.text_input("Reason for the Project 1", key="project_reason_1")
         timeen1 = st.text_input("Time Frame 1 (DD.MM.YYYY - DD.MM.YYYY)", key="project_time_1")
-        taske11 = st.text_area("Tasks 1", key="project_task_11", height=100)
+        taske11 = st.text_area("Tasks 1 (Think about what you did)", key="project_task_11", height=100)
         taske12 = st.text_area("Tasks 2", key='project_task_12', height=100)
 
         projectname2 = st.text_input("Project Name 2", key="project_2")
         elocation2 = st.text_input("Location 2 (City, Country)", key="project_location_2")
         ereason2 = st.text_input("Reason for the Project 2", key="project_reason_2")
         timeen2 = st.text_input("Time Frame 2 (DD.MM.YYYY - DD.MM.YYYY)", key="project_time_2")
-        taske21 = st.text_area("Tasks 1", key="project_task_21", height=100)
+        taske21 = st.text_area("Tasks 1 (Think about what you did)", key="project_task_21", height=100)
         taske22 = st.text_area("Tasks 2", key='project_task_22', height=100)
 
     # Skills & Interest Section
