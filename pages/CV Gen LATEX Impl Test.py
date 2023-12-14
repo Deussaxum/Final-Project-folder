@@ -1721,12 +1721,11 @@ with tabs[4]:
         languages1 = st.text_input("Languages", value=languages_combined, key="languages_5_key")
         computer1 = st.text_input("Computer Skills", value=computer_skills_combined, key="computer_skills_key_5")
         interests1 = st.text_input("Interests", value=interests_combined, key="interests_5_key")
-
-    
+        technologies1 = st.text_area("Technologies", key='technologies_1_key')
 
     if st.button("Generate LaTeX", key='generate_latex_button_tab5'):
-        latex_code = build_latex_code5(name, address, phone, email, university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1, university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2, experience1, locatione1, position1, timee1, task11, task12, experience2, locatione2, position2, timee2, task21, task22, extracurricular1, additionaleducation1, certificates1, languages1, projectname1,projectname2, elocation1, ereason1, timeen1, taske11, taske12, elocation2, timeen2, taske21, taske22, computer1, interests1, ereason2)
-        st.text_area("Generated LaTeX Code:", latex_code, height=300, key="b")
+        latex_code = build_latex_code5(name, address, phone, email, university1, locationus1, majorus1, timeus1, courses1, gpa1, clubs1, university2, locationus2, majorus2, timeus2, courses2, gpa2, clubs2, experience1, locatione1, position1, timee1, task11, task12, experience2, locatione2, position2, timee2, task21, task22, extracurricular1, additionaleducation1, certificates1, languages1, projectname1, projectname2, planguage1, pfunction1, timep1, taskp11, taskp12, planguage2, pfunction2, timep2, taskp21, taskp22, technologies1)
+        st.text_area("Generated LaTeX Code:", latex_code, height=300, key="c")
         
         st.markdown("### How to Create a Pdf with this LaTeX Code")
         st.markdown("""
