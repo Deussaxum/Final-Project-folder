@@ -118,7 +118,7 @@ def get_responses_from_sliders(sliders):
 
 # Main function defining the Streamlit app
 def main():
-    st.image('/Users/dustinbaumbach/Desktop/360_F_209798420_6ZbtGqBjmzQlaiEET1eDWJnBwPLBa8XW.jpg', width=1000, use_column_width='true')  # Display header image
+    st.image('career.png', width=1000, use_column_width='true')  # Display header image
     # Displaying the title of the app
     st.title("Career Fit Assessment Tool\n Assessment of Industry Fit based on Big 5 Personality Traits, Skills, and Work-Life Balance")
 
