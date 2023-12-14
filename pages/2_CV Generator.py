@@ -639,7 +639,7 @@ def build_latex_code6(name, address, phone, email, university1, locationus1, maj
     """
     return latex_code
 
-# Initialize session state for LinkedIn data
+# Initialize session state for LinkedIn data (data persistence)
 if 'linkedin_data' not in st.session_state:
     st.session_state['linkedin_data'] = {}
 
@@ -647,7 +647,7 @@ st.title("CV Generator 📃")
 
 linkedin_profile_url = st.text_input('Enter your LinkedIn profile URL', key='linkedin_url_key')
 
-# Function to extract information from API response
+# Function to extract and process information from API response
 def extract_info(jsondata):
     # Initialize default values for all fields
     extracted_info = {
@@ -664,7 +664,11 @@ def extract_info(jsondata):
     }
     return extracted_info
 
-# Function to retrieve information
+
+# Source: The whole API data pull has been designed in accordance with the documentation of the provider of the API (proxicurl People API from Nubela)
+# You can access the documentation following this link: https://nubela.co/proxycurl/people-api
+# IMPORTANT: This is not considered scraping, since it is reduced to retrieve public information from only one profile at once.
+# Function to retrieve information via API (nubela)
 def retrieve_info(linkedin_profile_url):
     api_key = 'OQfhKnmj2k9bUHmlHH9Qbg'
     headers = {'Authorization': 'Bearer ' + api_key}
@@ -678,11 +682,10 @@ def retrieve_info(linkedin_profile_url):
         st.error(f"Failed to retrieve profile information: HTTP {response.status_code}")
         return {}
 
-# Initialize linkedin_data as an empty dictionary to avoid NameError
+# Initialize linkedin_data as an empty dictionary
 linkedin_data = {}
 
-# Streamlit app layout
-
+# Button retrieving the data retrieval
 if st.button('Retrieve LinkedIn Data', key='retrieve_data_button'):
         st.session_state['linkedin_data'] = retrieve_info(linkedin_profile_url) or {}
 
@@ -697,29 +700,35 @@ tab_titles = [
 
 tabs=st.tabs(tab_titles)
 
+# THE CONTENTS OF THE FOLLOWING TABS ARE BARELY DIFFERING FROM EACH OTHER. ONLY THE INPUT FIELDS AND THEIR DESCRIPTION ARE VARYING.
+# That is why only the first tab contains detailed descriptions. The other tabs contain basic information.
+
 with tabs[0]:
 
     # Personal Information Section
     st.header('Your CV, Your Story: Complete the Chapters')
+
+    # First checking whether or not data regarding location are available. If so, the available information are merged and saved in session state.
     with st.expander("Personal Information", expanded=False):
         city = st.session_state['linkedin_data'].get('city', '')
         state = st.session_state['linkedin_data'].get('state', '')
         country = st.session_state['linkedin_data'].get('country', '')
-
         address_components = [comp for comp in [city, state, country] if comp]
         formatted_address = ', '.join(address_components)
 
+    # Creation of input fields. If data is available from API, it is pre-filled in the respective fields / connected to the variable.
         name = st.text_input("Name", value=st.session_state['linkedin_data'].get('full_name', ''), key='name_key')
         address = st.text_input("Address (City, State, Country)", value=formatted_address, key='address_key')
         phone = st.text_input("Phone Number", key='phone_key')
         email = st.text_input("E-Mail", key='email_key')
 
     # Education Section
-    # Assuming the first two education entries in LinkedIn data (if they exist) are to be used
+    # First two education entries in LinkedIn data (if they exist) are to be used
     education_entries = st.session_state['linkedin_data'].get('education', [{} for _ in range(2)])
 
+    # Setting rules for formatting of the output from linkedin (start and end dates of employments / activities): DD.MM.YYYY format
+    # Dict. formatting with help of this youtube video: https://www.youtube.com/watch?v=vTX3IwquFkc
     def format_date(date_dict):
-        """Formats a date dictionary into DD.MM.YYYY format."""
         if date_dict:
             day = date_dict.get('day', 1)  # Default to 1 if day is not available
             month = date_dict.get('month', 1)  # Default to 1 if month is not available
@@ -736,6 +745,7 @@ with tabs[0]:
     ends_at1 = format_date(education_entries[0].get('ends_at')) if education_entries else ''
     timeus1 = f"{starts_at1} - {ends_at1}" if ends_at1 else starts_at1
 
+    # Retrieving of information via Proxycurl (if available). start_at and ends_at calls from proxycurl api are formatted according to the formatting rules set before and then merged into one output (timeus#).
     university2 = education_entries[1].get('school', '') if len(education_entries) > 1 else ''
     locationus2 = education_entries[1].get('location', '') if len(education_entries) > 1 else ''
     majorus2 = education_entries[1].get('field_of_study', '') if len(education_entries) > 1 else ''
@@ -744,6 +754,7 @@ with tabs[0]:
     ends_at2 = format_date(education_entries[1].get('ends_at')) if len(education_entries) > 1 else ''
     timeus2 = f"{starts_at2} - {ends_at2}" if ends_at2 else starts_at2
 
+    # Creation of the Input fields. If entries from Linkedin Proxycurl API are available, pre-fill the input fields. If not, leave blank.
     with st.expander("Education", expanded=False):
         university1 = st.text_input("University/School 1", value=university1, key="unique_key_5")
         locationus1 = st.text_input("Location 1", value=locationus1, key="unique_key_6")
@@ -762,8 +773,8 @@ with tabs[0]:
         clubs2 = st.text_input("Clubs/Activities 2", key="unique_key_18")
 
     # Professional Experience Section
+    # Same as before, date formatting aiming to have a standard
     def format_date(date_dict):
-        """Formats a date dictionary into DD.MM.YYYY format."""
         if date_dict:
             day = date_dict.get('day', 1)  # Default to 1 if day is not available
             month = date_dict.get('month', 1)  # Default to 1 if month is not available
