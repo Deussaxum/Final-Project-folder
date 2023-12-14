@@ -36,84 +36,88 @@ st.info("""
     The results are presented in a visually accessible format, utilizing diagrams to illustrate your skills and personality traits. Here you can see some examples for such diagrams: 
 """)
 
-local_image_path1 = "Example_Diagramm1.png"
-local_image_path2 = "Example_Diagramm2.jpg"
-local_image_path3 = "Example_Diagramm3.png"
-local_image_path4 = "Example_Diagramm4.png"
+diagramm_image_url1 = "Example_Diagramm1.png"
+diagramm_image_url2 = "Example_Diagramm2.jpg"
+diagramm_image_url3 = "Example_Diagramm3.png"
+diagramm_image_url4 = "Example_Diagramm4.png"
 col1, col2 = st.columns(2)
 
 # Box 1
 with col1:
     
-    st.image(local_image_path1)
+    st.image(diagramm_image_url1)
   
 
 # Box 2
 with col2:
    
-    st.image(local_image_path2)
+    st.image(diagramm_image_url2)
    
 
 # Box 3
 with col1:
   
-    st.image(local_image_path3)
+    st.image(diagramm_image_url3)
     
 
 # Box 4
 with col2:
    
-    st.image(local_image_path4)
+    st.image(diagramm_image_url4)
+
+#defintion of the file paths for the pictures below    
   
-common_image_url1 = "Example_Diagramm1.png"
-common_image_url2 = "Example_Diagramm1.png"
-common_image_url3 = "Example_Diagramm1.png"
-common_image_url4 = "Example_Diagramm1.png"
-common_image_url5 = "Example_Diagramm1.png"
-common_image_url6 = "Example_Diagramm1.png"
-common_image_url7 = "Example_Diagramm1.png"
+header_image_url1 = "Consulting.Picture.jpeg"
+header_image_url2 = "Finance.Picture.jpeg"
+header_image_url3 = "Corporate.Picture.jpeg"
+header_image_url4 = "IT.Picture.jpeg"
+header_image_url5 = "Academic.Picture.jpeg"
+header_image_url6 = "Startup.Picture.jpeg"
+header_image_url7 = "Law.Picture.jpeg"
+
+#creation of the two columns for the different boxes
 col1, col2 = st.columns(2)
 
 # Box 1
 with col1:
     st.subheader("Consulting 🛫")
-    st.image(common_image_url1)
+    st.image(header_image_url1)
     st.write("As a consultant, you provide expert advice to organizations, helping them improve performance, operations, and profitability. Your role involves analyzing situations, identifying problems, and presenting comprehensive solutions to meet client needs.")
 
 # Box 2
 with col2:
     st.subheader("Finance 📈")
-    st.image(common_image_url2)
+    st.image(header_image_url2)
     st.write("In Finance you offer financial advice, prepare lending agreements, and ensure accurate corporate records. Your role involves working with corporations of various sizes, providing services like credit, treasury, financing, and commercial analysis to meet their financial needs.")
 
 # Box 3
 with col1:
     st.subheader("Corporate 🏢")
-    st.image(common_image_url3)
+    st.image(header_image_url3)
     st.write("In Corporate, you work within an organization with opportunities for career advancement, being responsible for a variety of roles including account management, providing financial advice, or ensuring accurate records to contribute to the company's business goals.")
 
 # Box 4
 with col2:
     st.subheader("IT 💻")
-    st.image(common_image_url4)
+    st.image(header_image_url4)
     st.write("As an IT professional, you manage and store data using computers, software, databases, networks, and servers, and your role may include writing programs, maintaining networks, analyzing systems, and providing technical support.") 
 
 # Box 5
 with col1:
     st.subheader("Academic 📚")
-    st.image(common_image_url5)
+    st.image(header_image_url5)
     st.write("Working in Academia involves teaching, guiding students through lectures and seminars, and conducts research to contribute to their field of expertise. You often participate in academic service such as serving on committees and reviewing scholarly work.")
 
 # Box 6
 with col2:
     st.subheader("Start-Up 🚀")
-    st.image(common_image_url6)
+    st.image(header_image_url6)
     st.write("In a startup, you typically wear multiple hats, taking on various responsibilities that can range from strategic planning to hands-on execution. Your role may involve setting direction, creating culture, and driving growth, all while adapting to the fast-paced and ever-changing startup environment.")
 
 # Box 7
 with col1:
     st.subheader("Law 👨🏼‍⚖️")
-    st.image(common_image_url7)
+    st.image(header_image_url7)
     st.write("As a lawyer, you will engage in a variety of tasks and responsibilities - your main one will be defending your clients. There are different areas in which you can work as a lawyer, one example is tax law.")
 
 st.sidebar.success("Please select a page Above.")
