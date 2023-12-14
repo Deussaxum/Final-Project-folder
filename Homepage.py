@@ -6,7 +6,7 @@ st.set_page_config(
 )
 
 
-header_image_url = "skyline_homepage.png"
+header_image_url = "CareerCompassHeader.jpeg"
 st.image(header_image_url)
 
 st.title("The Career Compass")
