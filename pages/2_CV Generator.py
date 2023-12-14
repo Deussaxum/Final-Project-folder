@@ -1543,7 +1543,7 @@ with tabs[4]:
 
         extracurricular1 = st.text_input("Extracurricular Activities / Engagement", value=volunteer_work_combined, key="extracurricular_5_key")
         additionaleducation1 = st.text_input("Additional Education (e.g. Excel Certificates)", key="additional_education_5_key")  # No specific API data, so left for manual input
-        certificates1 = st.text_input("Certificates and Awards (e.g. Scholarhips)", value=certifications_combined, key="certificates_5_key")
+        certificates1 = st.text_input("Certificates and Awards (e.g. Scholarships)", value=certifications_combined, key="certificates_5_key")
 
     # Projects Section
     with st.expander("Projects", expanded=False):  # 'expanded=True' means the section will be expanded by default
