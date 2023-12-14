@@ -1560,8 +1560,6 @@ with tabs[4]:
         computer_skills_combined = ', '.join(computer_skills_entries[0:3])
 
         languages1 = st.text_input("Languages", value=languages_combined, key="languages_5_key")
-        computer1 = st.text_input("Computer Skills", value=computer_skills_combined, key="computer_skills_key_5")
-        interests1 = st.text_input("Interests", value=interests_combined, key="interests_5_key")
         technologies1 = st.text_area("Technologies", key='technologies_1_key')
 
     if st.button("Generate LaTeX", key='generate_latex_button_tab5'):
